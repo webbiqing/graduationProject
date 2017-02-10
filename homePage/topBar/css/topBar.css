@@ -1,0 +1,85 @@
+.topBarContainer{
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    color: #ffffff;
+    z-index: 3;
+}
+.topBarContainer .centerBox{
+    width: 1280px;
+    height:100px;
+}
+.topBarContainer .logoBox{
+    height:100px;
+    margin-left: 70px;
+}
+.topBarContainer .logoBox img{
+    width: 60px;
+    height: 65px;
+    margin-top: 18px;
+}
+.topBarContainer .topBar-ul{
+    margin-left: 40px;
+    font-weight: 100;
+}
+.topBar-ul li{
+    height: 100px;
+    line-height: 100px;
+    margin-left: 20px;
+}
+.topBar-ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
+}
+.topBar-ul li a:hover:after{
+    left: 0;
+    opacity: 1;
+    width: 100%;
+}
+.topBar-ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background-color: #ddb321;
+    opacity: 0;
+    width: 0;
+    left: 50%;
+    -webkit-transition: all 300ms cubic-bezier(.455,.03,.515,.955);
+    -moz-transition: all 300ms cubic-bezier(.455,.03,.515,.955);
+    -ms-transition: all 300ms cubic-bezier(.455,.03,.515,.955);
+    -o-transition: all 300ms cubic-bezier(.455,.03,.515,.955);
+}
+.topBarContainer .searchBox{
+    width: 500px;
+    margin-left: 80px;
+    margin-top: 33px;
+}
+.topBarContainer .searchBox input,
+.topBarContainer .searchBox button{
+    border-radius: 10px;
+}
+.topBarContainer .logRegBox{
+    margin-left: 60px;
+    line-height: 100px;
+}
+.topBarContainer .logRegBox span{
+    padding: 0 2px;
+    cursor: pointer;
+}
+.topBarContainer .loginBox{
+    margin-left: 60px;
+    margin-top: 40px;
+}
+.topBarContainer .topBar-content{
+    width: 100%;
+    min-height:600px;
+    position: absolute;
+    background-color: #202020;
+    opacity: 0.7;
+    z-index: -1;
+}
+
