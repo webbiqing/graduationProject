@@ -1,0 +1,73 @@
+/*元素重置*/
+body,ul,li,ol,li,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+    font-family:Helvetica,Arial, "冬青黑体简体中文","Tahoma",
+    "Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti",
+    "WenQuanYi Micro Hei",SimSun,sans-serif,
+    "Apple Color Emoji" !important;
+}
+a,a:hover,a:focus{
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+input,button,textarea,select{
+    outline: none;
+}
+
+/*字体*/
+.f12 {
+    font-size: 12px
+}
+
+.f13 {
+    font-size: 13px
+}
+
+.f14 {
+    font-size: 14px
+}
+
+.f16 {
+    font-size: 16px
+}
+
+.f18 {
+    font-size: 18px
+}
+
+.f24 {
+    font-size: 24px
+}
+
+/*浮动*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.clearF{
+    overflow: hidden;
+}
+.clearFC{
+    clear: both;
+}
+/*居中*/
+.tc {
+    text-align: center;
+}
+.block{
+    display: block;
+}
+.inline-block{
+    display: inline-block;
+}
+.centerBox{
+    margin: 0 auto;
+}
