@@ -19,10 +19,12 @@ App.config(function($stateProvider, $urlRouterProvider) {
             cache: false,
             url : "/homePage",
             views:{
+                cache: false,
                 '':{
                     templateUrl: 'homePage/homePage.html'
                 },
                 'topBar@homePage':{
+                    cache: false,
                     templateUrl: 'homePage/topBar/pages/topBar.html',
                     controller:'topBarCtrl',
                     resolve:{
@@ -32,6 +34,7 @@ App.config(function($stateProvider, $urlRouterProvider) {
                     }
                 },
                 'mainBody@homePage':{
+                    cache: false,
                     templateUrl: 'homePage/mainBody/pages/mainBody.html',
                     controller:'mainBodyCtr',
                     resolve:{
@@ -41,6 +44,7 @@ App.config(function($stateProvider, $urlRouterProvider) {
                     }
                 },
                 'footBar@homePage':{
+                    cache: false,
                     templateUrl: 'homePage/footBar/pages/footBar.html'
                     //controller:''
                 }
