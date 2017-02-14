@@ -114,3 +114,95 @@
     font-weight: bolder;
     margin-top: 40px;
 }
+.mainBodyContainer .productsBox{
+    margin-top: 50px;
+}
+.mainBodyContainer .swiper-container{
+    width: 100%;
+}
+.mainBodyContainer .swiper-slide{
+    text-align: center;
+}
+.mainBodyContainer .productsBox img{
+    height:200px;
+    width: 100%;
+    position: relative;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.mainBodyContainer .swiper-slide-container:hover img{
+    -webkit-transform: scale(1.08,1.08);
+    -moz-transform: scale(1.08,1.08);
+    -o-transform: scale(1.08,1.08);
+    -ms-transform: scale(1.08,1.08);
+    transform: scale(1.08,1.08);
+}
+.swiper-slide-container:hover .readMore{
+    cursor: pointer;
+    opacity: 100;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+.mainBodyContainer .swiper-slide-container{
+    display: inline-block;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    width: 100%
+}
+.swiper-slide-container .readMore{
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    position: absolute;
+    width: 283px;
+    height:220px;
+    background-color: rgba(0,0,0,.6);
+    top: 0px;
+    left: 0px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.swiper-slide-container .readMore button{
+    margin-top: 90px;
+    padding: 5px 20px;
+    border: none;
+    color: #ffffff;
+    background-color:transparent;
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -o-transform: scale(5);
+    -ms-transform: scale(5);
+    transform: scale(5);
+    -webkit-transition: all 0.3s ease-in-out 0.2s;
+    -moz-transition: all 0.3s ease-in-out 0.2s;
+    -o-transition: all 0.3s ease-in-out 0.2s;
+    -ms-transition: all 0.3s ease-in-out 0.2s;
+    transition: all 0.3s ease-in-out 0.2s;
+}
+.swiper-slide-container:hover .readMore button{
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.swiper-slide-container p{
+    margin-top: 20px;
+}

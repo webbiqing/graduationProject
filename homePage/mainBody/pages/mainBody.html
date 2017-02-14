@@ -33,12 +33,22 @@
     <div class="mainProBox">
         <div class="productH">精英产品区</div>
         <div class="productsBox">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <ks-swiper-container
+                    loop="true"
+                    show-nav-buttons="true"
+                    slides-per-view="4"
+                    space-between="50"
+                    pagination-clickable="false">
+                <ks-swiper-slide ng-repeat="s in [1,2,3,4,5]">
+                    <div class="swiper-slide-container">
+                        <img ng-src="http://api.randomuser.me/portraits/thumb/women/{{s}}.jpg">
+                        <div class="readMore">
+                            <button class="f16">阅读更多</button>
+                        </div>
+                        <p>csd</p>
+                    </div>
+                </ks-swiper-slide>
+            </ks-swiper-container>
         </div>
     </div>
 </div>
