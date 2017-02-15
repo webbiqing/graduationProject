@@ -1,0 +1,40 @@
+.backStageContainer{
+
+}
+.backStageContainer .left_bar_style {
+    position:absolute;
+    width: 200px;
+    top: 102px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.75);
+    left: 0px;
+    overflow: auto;
+    overflow-x: hidden;
+    z-index: auto;
+    margin:0 auto;
+    float:none;
+    /*min-height: 650px;*/
+    color: #ffffff;
+}
+.backStageContainer .left_bar_style a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.backStageContainer .accordion-heading{
+    width: 100%;
+    padding: 8px 0 8px 50px;
+    background-color:  #000000;
+    margin-bottom: 5px;
+}
+
+.backStageContainer .accordion-inner{
+    width: 100%;
+    padding: 8px 0 8px 70px;
+}
+.backStageContainer .accordion-inner:hover{
+    background-color: #ddb321;
+    color: #000000;
+}
+.backStageContainer .accordion-inner:hover a{
+    color: #000000;
+}

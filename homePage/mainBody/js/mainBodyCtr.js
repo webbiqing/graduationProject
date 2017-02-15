@@ -2,12 +2,10 @@
  * 主体部分控制器
  */
 App.controller('mainBodyCtr', function($rootScope, $scope) {
-
-
     //启动首页主轮播
     (function () {
         var scrollDuration = 1000;
-        var scrollEasing = 'quadratic';
+        var easeInCubic = 'quadratic';
         //	small images carousel
         $('#carousel-small').carouFredSel({
             direction: 'up',
@@ -24,16 +22,16 @@ App.controller('mainBodyCtr', function($rootScope, $scope) {
                 fx: 'directscroll',
                 duration: scrollDuration,
                 timeoutDuration: 1500,
-                easing: scrollEasing,
+                easing: easeInCubic,
                 onBefore: function (data) {
                     data.items.old.animate({
                         'margin-right': -100
-                    }, scrollDuration, scrollEasing);
+                    }, scrollDuration, easeInCubic);
                     data.items.visible.css({
                         'margin-right': 120
                     }).animate({
                         'margin-right': 10
-                    }, scrollDuration, scrollEasing);
+                    }, scrollDuration, easeInCubic);
                     var index = $(this).triggerHandler('currentPosition');
                     if (index == 0) {
                         index = $(this).children().length;
@@ -60,16 +58,16 @@ App.controller('mainBodyCtr', function($rootScope, $scope) {
             scroll: {
                 fx: 'directscroll',
                 duration: scrollDuration,
-                easing: scrollEasing,
+                easing: easeInCubic,
                 onBefore: function (data) {
                     data.items.old.animate({
                         'margin-left': -140
-                    }, scrollDuration, scrollEasing);
+                    }, scrollDuration, easeInCubic);
                     data.items.visible.css({
                         'margin-left': 160
                     }).animate({
                         'margin-left': 10
-                    }, scrollDuration, scrollEasing);
+                    }, scrollDuration, easeInCubic);
                 }
             }
         });
@@ -88,7 +86,7 @@ App.controller('mainBodyCtr', function($rootScope, $scope) {
             scroll: {
                 fx: 'directscroll',
                 duration: scrollDuration,
-                easing: scrollEasing
+                easing: easeInCubic
             }
         });
         //	tweek the pagination to always scroll forward
@@ -107,9 +105,8 @@ App.controller('mainBodyCtr', function($rootScope, $scope) {
         $scope.swiper.slideNext();
     };
     $scope.onReadySwiper = function(swiper) {
-        console.log('onReadySwiper');
         swiper.on('slideChangeStart', function() {
-            console.log('slideChangeStart');
+
         });
     };
 });

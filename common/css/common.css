@@ -15,6 +15,9 @@ a,a:hover,a:focus{
     cursor: pointer;
     outline: none;
 }
+img{
+    border:none;
+}
 input,button,textarea,select{
     outline: none;
 }
@@ -70,4 +73,14 @@ input,button,textarea,select{
 }
 .centerBox{
     margin: 0 auto;
+}
+/*定位*/
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
 }

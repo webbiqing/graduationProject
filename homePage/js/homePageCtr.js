@@ -1,8 +1,7 @@
 /**
- * 头部控制器
+ * Created by hand on 2017/2/15.
  */
-
-App.controller('topBarCtrl', function($rootScope, $scope) {
+App.controller('homePageCtr', function($rootScope, $scope) {
     $scope.show = false;
     $scope.choose = function () {
         $scope.show = true;
@@ -11,3 +10,4 @@ App.controller('topBarCtrl', function($rootScope, $scope) {
         $scope.show = false;
     }
 });
+

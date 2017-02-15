@@ -133,26 +133,26 @@
     -ms-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
-.mainBodyContainer .swiper-slide-container:hover img{
+.mainBodyContainer .productsBox .swiper-slide-container:hover img{
     -webkit-transform: scale(1.08,1.08);
     -moz-transform: scale(1.08,1.08);
     -o-transform: scale(1.08,1.08);
     -ms-transform: scale(1.08,1.08);
     transform: scale(1.08,1.08);
 }
-.swiper-slide-container:hover .readMore{
+.mainBodyContainer .productsBox .swiper-slide-container:hover .readMore{
     cursor: pointer;
     opacity: 100;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-.mainBodyContainer .swiper-slide-container{
+.mainBodyContainer .productsBox .swiper-slide-container{
     display: inline-block;
     border: 1px solid #cccccc;
     padding: 10px;
     width: 100%
 }
-.swiper-slide-container .readMore{
+.productsBox .swiper-slide-container .readMore{
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -168,7 +168,7 @@
     -ms-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-.swiper-slide-container .readMore button{
+.productsBox .swiper-slide-container .readMore button{
     margin-top: 90px;
     padding: 5px 20px;
     border: none;
@@ -188,7 +188,7 @@
     -ms-transition: all 0.3s ease-in-out 0.2s;
     transition: all 0.3s ease-in-out 0.2s;
 }
-.swiper-slide-container:hover .readMore button{
+.productsBox .swiper-slide-container:hover .readMore button{
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
     opacity: 1;
@@ -203,6 +203,52 @@
     -ms-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
-.swiper-slide-container p{
+.productsBox .swiper-slide-container p{
     margin-top: 20px;
+}
+
+.mainBodyContainer .newsBox  .newsH{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 40px 0;
+}
+.newsBox .swiper-slide-container{
+    width: 100%;
+    height:100px;
+}
+.newsBox .swiper-slide-container img{
+    width: 100%;
+    height:100px;
+
+}
+.mainBodyContainer .newsBox .newsImgBox{
+    position: relative;
+    width: 580px;
+    height:325px;
+    background-color: #2aabd2;
+}
+.mainBodyContainer .newsBox .newsTextBox{
+    width: 700px;
+    height:325px;
+    background-color: #eea236;
+}
+.mainBodyContainer .newsContentBox .newsType{
+    display: inline-block;
+    font-size: 18px;
+    padding:3px 8px;
+    border: 1px double #cccccc;
+    font-weight: bold;
+    color: #eea236;
+    position: absolute;
+    top:10px;
+    left: 10px;
+    background-color: #0f0f0f;
+}
+.newsContentBox .newsImgBox img{
+    width: 580px;
+    height:325px;
+}
+.newsBox .swiper-slide-container img{
+    cursor: pointer;
 }

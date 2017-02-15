@@ -1,3 +1,53 @@
-<div ui-view="topBar"></div>
+<section class="topBarContainer">
+    <div class="topBar-content" ng-if="show" ng-mouseleave="change()"></div>
+    <div class="centerBox">
+        <div class="logoBox fl">
+            <a ui-sref="homePage"><img class="inline-block" src="homePage/images/logo.png" alt=""></a>
+        </div>
+        <nav>
+            <ul class="fl clearF topBar-ul f16">
+                <li class="fl" ><a  ng-mouseenter="choose()">型号</a></li>
+                <li class="fl"><a>品牌</a></li>
+                <li class="fl"><a >服务</a></li>
+                <li class="fl"><a >体验</a></li>
+                <li class="fl"><a>线下商店</a></li>
+            </ul>
+        </nav>
+        <div class="row searchBox fl">
+            <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                <input type="text" class="form-control" placeholder="站内搜索">
+            </div>
+        </div>
+        <!--<div class="logRegBox fl">
+            <span>登录</span>
+            <span>|</span>
+            <span>注册</span>
+        </div>-->
+        <div class="loginBox fl">
+            <div class="dropdown">
+                <div class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="userName">wbq</span>
+                    <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a ui-sref="homePage.backStage">后台管理</a></li>
+                    <li><a href="#">展会管理</a></li>
+                    <li><a href="#">个人信息</a></li>
+                    <li><a href="#">修改密码</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 <div ui-view="mainBody"></div>
-<div ui-view="footBar"></div>
+<!--
+<section class="footBarContainer">
+    <div class="focusC">关注我们</div>
+    <div class="rightC">权限证书</div>
+</section>-->

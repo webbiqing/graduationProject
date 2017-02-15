@@ -1,0 +1,52 @@
+<div class="backStageContainer">
+    <section class="left_bar_style f16">
+        <div class="accordion" id="accordion1">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseOne" data-parent="#accordion1">
+                        <div>用户管理</div>
+                    </a>
+                </div>
+                <span id="collapseOne" class="accordion-body collapse">
+                    <a>
+                        <div class="accordion-inner">个人用户</div>
+                    </a>
+                    <a>
+                        <div class="accordion-inner">专家用户</div>
+                    </a>
+			    </span>
+            </div>
+        </div>
+        <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseTwo" data-parent="#accordion2">
+                        <div>展会管理</div>
+                    </a>
+                </div>
+                <span id="collapseTwo" class="accordion-body collapse">
+                    <a>
+                        <div class="accordion-inner">展会信息</div>
+                    </a>
+                    <a>
+                        <div class="accordion-inner">展会动态</div>
+                    </a>
+			    </span>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    $(document).ready(function() {
+        $("body").on("click", ".left_bar_style>.accordion>.accordion-group>div", function() {
+            $(".left_bar_style>.accordion>.accordion-group>div").removeClass("hoverAccordionHead");
+            $(".accordion-inner").removeClass("showDiv");
+            $(this).addClass("hoverAccordionHead");
+        });
+        $("body").on("click", ".accordion-inner", function() {
+            $(".left_bar_style>.accordion>.accordion-group>div").removeClass("hoverAccordionHead");
+            $(".accordion-inner").removeClass("showDiv");
+            $(this).addClass("showDiv");
+        });
+    });
+</script>
