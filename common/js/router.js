@@ -39,6 +39,7 @@ App.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        /*后台管理路由*/
         .state('homePage.backStage',{
             cache: false,
             url : "/backStage",
@@ -53,6 +54,23 @@ App.config(function($stateProvider, $urlRouterProvider) {
                     }
                 }
             }
-        });
+        })
+        /*展会管理*/
+        .state('homePage.backStage.companyShow',{
+            cache: false,
+            url : "/companyShow",
+            views:{
+                'rightDetails@homePage.backStage': {
+                    templateUrl: 'backStageManage/companyShowManage/pages/companyShowInfo.html',
+                    controller: 'companyShowInfoCtr',
+                    resolve: {
+                        deps: ["$ocLazyLoad", function ($ocLazyLoad) {
+                            return $ocLazyLoad.load(["backStageManage/companyShowManage/css/companyShowInfo.css",
+                                "backStageManage/companyShowManage/js/companyShowInfoCtr.js"]);
+                        }]
+                    }
+                }
+            }
+        })
 });
 

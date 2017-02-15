@@ -12,7 +12,7 @@
                         <div class="accordion-inner">个人用户</div>
                     </a>
                     <a>
-                        <div class="accordion-inner">专家用户</div>
+                        <div class="accordion-inner">企业用户</div>
                     </a>
 			    </span>
             </div>
@@ -26,7 +26,7 @@
                 </div>
                 <span id="collapseTwo" class="accordion-body collapse">
                     <a>
-                        <div class="accordion-inner">展会信息</div>
+                        <div class="accordion-inner" ui-sref="homePage.backStage.companyShow">展会信息</div>
                     </a>
                     <a>
                         <div class="accordion-inner">展会动态</div>
@@ -35,6 +35,9 @@
             </div>
         </div>
     </section>
+    <aside class="rightBar" ui-view="rightDetails">
+
+    </aside>
 </div>
 <script>
     $(document).ready(function() {

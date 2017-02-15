@@ -1,0 +1,340 @@
+
+/*管理页面css*/
+.expo_content{
+    width: 978px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    font-family: "微软雅黑", "Microsoft YaHei", "Arial";
+    color: #2e2e2e;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+.expo_content textarea{
+    font-size: 14px;
+    width: 100%;
+}
+.expo_content ._top{
+    padding-bottom:15px;
+}
+.expo_content ._top>span{
+    font-size:16px;
+}
+.expo_content ._top>button{
+    height:25px;
+    width: 65px;
+    border: none;
+    border-radius: 25px;
+    color: #ffffff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);;
+    float: right;
+    margin-top: -2px;
+}
+.show_panel{
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.show_panel .card_top .right{
+    float: right;
+    margin-right: 10px;
+}
+.card_detail{
+    width: 700px;
+    height: 200px;
+    margin-left: 50px;
+}
+.card_detail label{
+    width: 70px;
+    text-align: right;
+    margin-left: 10px;
+}
+.card_detail input{
+    padding-left: 5px;
+}
+.card_detail_btns button{
+    width: 85px;
+    height: 30px;
+    border-radius:13px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    margin-right:10px;
+    outline: none;
+}
+.card_detail_btns button:hover{
+    border: none;
+    background-color:rgba(0, 0, 0, 0.75);
+    color: #FFFFFF;
+}
+.card_text{
+    height: 200px;
+    padding: 10px;
+}
+.card_text .card_detail table input{
+    width: 100%;
+}
+.card_top{
+    margin-bottom: 20px;
+}
+.card_top img{
+    display: inline-block;
+    margin-right:5px;
+}
+.card_top:nth-child(1){
+    cursor: pointer;
+}
+.input_disable{
+    border: 0px;
+}
+.ab_right
+{
+    position: absolute;
+    right: 0px;
+}
+.relative img{
+    display: inline-block;
+    margin-right: 5px;
+}
+.relative{
+    margin-bottom: 20px;
+}
+.advertise{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.advertise_img{
+    width: 460px;
+    height: 140px;
+}
+.image_delete{
+    position: absolute;
+    top: 115px;
+    right: 5px;
+}
+.add_img{
+    text-align:center;
+    width:930px;
+    height: 50px;
+    line-height: 50px;
+    position:relative;
+    color: #5B96D1;
+    overflow: hidden;
+    margin-left:10px;
+    cursor: pointer;
+    background:url("company/image/addPic_03.png")  center;
+}
+.add_img input{
+    width:940px;
+    left: -10px;
+    height: 50px;
+    z-index:1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    line-height: normal;
+    position: absolute;
+    font-size:500px;
+}
+/*主营业务*/
+.mainBuss-add-con{
+    margin-bottom: 20px;
+}
+.mainBuss-add-con .add-pro-btn{
+    height: 50px;
+    width: 100%;
+    background-color: #eeeeee;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(0, 0, 0, 0.75);;
+    margin:10px 0;
+    cursor:pointer;
+}
+._mainBuss-add{
+    background-color:#dfdfdf;
+    height:38px;
+    line-height:38px;
+    padding-left:14px;
+    margin-bottom: 15px;
+}
+.mainBuss-show{
+    overflow: hidden;
+}
+.mainBuss-show .showInfo_product{
+    width: 280px;
+    height: 125px;
+    display: inline-block;
+    position: absolute;
+}
+.mainBuss-show img{
+    display: inline-block;
+    width: 165px;
+    height: 125px;
+    margin-right:10px;
+}
+.mainBuss-showInfo{
+    height:172px;
+    padding: 3px;
+    float: left;
+    width: 460px;
+}
+.mainBuss-showInfo table{
+    display: inline-block;
+    margin-top: -45px;
+}
+.mainBuss-showInfo table td{
+    height: 25px;
+    vertical-align: top;
+}
+.mainBuss-showInfo table .td_info{
+    width: 235px;
+    padding-left: 5px;
+}
+.mainBuss-showInfo .product_add_del{
+    position: absolute;
+    bottom: 0px;
+}
+.mainBuss-showInfo .product_add_del img{
+    display: inline-block;
+    margin-right:5px;
+    width: 15px;
+    height: 17px;
+}
+.mainBuss-show-add{
+    float: left;
+    position: relative;
+}
+.mainBuss-showInfo table{
+    position: absolute;
+    top:50px;
+    margin-left: 5px;
+}
+.mainBuss-show-add{
+    padding: 5px;
+}
+.mainBuss-show-add .product-img{
+    display: inline-block;
+    width: 165px;
+    height: 125px;
+    background:url("company/image/honerBg.jpg") no-repeat center;
+    cursor: pointer;
+}
+.mainBuss-show-add  .add-btns{
+    width:210px;
+    margin: 0 auto;
+}
+/*
+公司介绍
+*/
+.panel_title{
+    height: 45px;
+    line-height: 45px;
+    padding: 0 0 0 10px;
+}
+.panel_title>span{
+    font-size: 14px;
+    margin: 10px 0 0 10px;
+}
+.comp_ul>li{
+    margin-bottom: 10px;
+    width: 958px;
+}
+.comp_introduce{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background-color: #dfdfdf;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 15px;
+}
+.introduce_ico{
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.comp_text1{
+    width: 100%;
+    padding: 15px 15px 20px 15px;
+}
+.comp_text2{
+    width: 100%;
+    height: 187px;
+    border: 1px solid rgba(0, 0, 0, 0.75);;
+    padding: 15px 15px 0 15px;
+}
+.comp_text2 .btns{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.comp_text2 .btns button{
+    border-radius: 15px;
+    padding: 5px 25px;
+    margin: 0 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    outline: none;
+}
+.comp_text2 .btns button:hover{
+    background-color: rgba(0, 0, 0, 0.75);;
+    color: #FFFFFF;
+    border: none;
+}
+/**
+企业荣誉
+*/
+.panel_title>label{
+    float: right;
+    margin-right: 10px;
+}
+.honer_images>ul{
+    overflow: hidden;
+    width: 100%;
+}
+.honer_images>ul>li{
+    float: left;
+    margin-left: 12px;
+    margin-bottom: 20px;
+    width: 225px;
+    height: 175px;
+    background-color:  #DDDDDD;
+    text-align: center;
+}
+.honer_images>ul>li>div:first-child{
+    height: 140px;
+    margin-left: -5px;
+}
+.honer_images>ul>li>div:first-child img{
+    display: block;
+    width: 225px;
+    height: 140px;
+}
+.honer_images>ul>li>div:last-child{
+    background-color: #FFFFFF;
+    display: inline-block;
+    width: 225px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #DDDDDD;
+    margin-left: -5px;
+}
+.honer_filePush{
+    background: url("company/image/honerBg.jpg");
+}
+.honer_filePush input{
+    width: 220px;
+    height: 140px;
+    opacity: 0;
+}
+.honer_filePush>div:last-child{
+    border:none;
+}
+.card_detail table td{
+    padding: 5px 5px;
+}

@@ -38,3 +38,16 @@
 .backStageContainer .accordion-inner:hover a{
     color: #000000;
 }
+.backStageContainer .rightBar{
+    position: absolute;
+    left: 179px;
+    right: 0px;
+    /*min-width: 900px;
+    min-height: 500px;
+    height: auto;*/
+    z-index: 4;
+    overflow-y: auto;
+    bottom: 0;
+    top: 102px;
+    background-color: #f6f7fb;
+}

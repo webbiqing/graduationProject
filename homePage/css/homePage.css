@@ -5,7 +5,7 @@
     height: 100px;
     position: fixed;
     color: #ffffff;
-    z-index: 3;
+    z-index: 100;
 }
 .topBarContainer .centerBox{
     width: 1280px;
