@@ -1,0 +1,22 @@
+<style>
+    .trends-container>div {padding: 20px 100px 0 100px; }
+    .trends-container>div .ng-table-pager {overflow: hidden;}
+    .trends-container>div ul {float: right;}
+    .trends-container>div ul li a{margin-left: 8px;}
+    .trends-container thead {display: none;}
+    .trends-container .table {width: 1280px;}
+    .trends-container .trends-container-ul tr {width: 1280px;}
+    .trends-container .trends-container-item  {width: 1080px; padding: 20px 100px 0 100px; border-bottom:none;}
+    .trends-container .trends-container-item .trends-date { padding-bottom:20px; border-bottom: 1px dashed #ccc;}
+</style>
+<div class="trends-container" ng-app="trendsModule" style="min-height: 500px;">
+    <table class="trends-container-ul table" ng-table="tableParams">
+        <tr  ng-repeat="dynamic in $data" ng-click="goToDetail(dynamic.id)">
+            <td class="trends-container-item" style="cursor: pointer; border-top:none;">
+                <div class="trends-topic">{{dynamic.title}}</div>
+                <div class="trends-text" ng-bind-html="dynamic.content"></div>
+                <div class="trends-date">时间：{{dynamic.update_date | date:'yyyy-MM-dd'}}</div>
+            </td>
+        </tr>
+    </table>
+</div>

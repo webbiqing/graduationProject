@@ -1,0 +1,67 @@
+<div class="canal-city-container">
+    <div class="canal-cityName">
+        <span>添加活动与资讯</span>
+        <a href="javascript:;" ui-sref="homePage.backStage.activityNewsManage">返回</a>
+    </div>
+    <div class="carouseCity-main">
+        <table class="addCarouseCity-list-table">
+            <tbody>
+            <tr>
+                <td>
+                    <em>*</em>
+                    <span>标题：</span>
+                </td>
+                <td>
+                    <input type="text" ng-model="gardenInfo.title" maxlength="25" placeholder="25个字以内">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <em>*</em>
+                    <span>发布人：</span>
+                </td>
+                <td>
+                    <div>
+                        <input class="inputTypeUrl"  type="text" ng-model="gardenInfo.link"  placeholder="请以http://或者https://开头的正确网址">
+                    </div>
+                    <span ng-show="isDirty" style="color: #ff3c3c">*请填写正确的网址链接</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;padding-top: 10px">
+                    <em>*</em>
+                    <span>上传图片：</span>
+                </td>
+                <td>
+                    <div class="file_info">
+                        <div class="file_upload_wrap fl">
+                            <span class="glyphicon glyphicon-open"></span>
+                            点击上传
+                            <input name="file_upload1" type="file" file-model="myFile1" img-Url="gardenInfo.img_url">
+                        </div>
+                        <span>图片支持jpg/png/gif格式，图片大小不能超过5M</span>
+                    </div>
+                    <div class="tc" style="width: 460px;height:185px;border: 1px solid #DDDDDD;margin-bottom: 10px;">
+                            <img id="imgUrl" ng-src="{{gardenInfo.img_url}}" style="max-width: 457px;max-height:183px;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;padding-top: 10px;margin-top: 20px;">
+                    <em>*</em>
+                    <span>介绍：</span>
+                </td>
+                <td>
+                    <textarea ng-model="gardenInfo.content" maxlength="300" placeholder="300字以内..."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="save_data" ng-click="addGardenInfo(gardenInfo)">保存</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

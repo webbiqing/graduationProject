@@ -1,0 +1,51 @@
+<div class="canal-city-container">
+    <div class="canal-cityName">
+        <span>活动与资讯</span>
+    </div>
+    <div class="carouseCity-main">
+        <div class="carouseCity-top">
+            <span class="navBox">
+                <a ng-class="{'active':publicityType==1}" ui-sref="backStageManage.canalManage.gardenManage({cityId:cityId,type:1})">活动</a>
+                <a ng-class="{'active':publicityType==2}" ui-sref="backStageManage.canalManage.gardenManage({cityId:cityId,type:2})">新闻</a>
+            </span>
+            <button ui-sref="homePage.backStage.addActivityNews">添加</button>
+        </div>
+        <table ng-table="tableParams" class="gm_middle_table" >
+            <thead>
+            <tr>
+                <th class="gm_top">
+                    <div class="carouseCity-list-top">
+                        <span class="carouseCity-first-theme">信息</span>
+                        <span class="carouseCity-second-theme">发布人</span>
+                        <span class="carouseCity-third-theme">排序</span>
+                        <span class="carouseCity-fourth-theme">操作</span>
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="gardenInfo in $data">
+                <td class="gm_table">
+                    <div class="carouseCity-list">
+                        <span class="carouseCity-first-theme">
+                            <div class="carouse-img-box"><img ng-src="{{gardenInfo.img_url}}" alt=""></div>
+                        <span class="carouseCity-list-main" ng-bind="gardenInfo.title"></span>
+                    </span>
+                        <a href="{{gardenInfo.link}}" target="_blank">
+                            <span class="carouseCity-second-theme" ng-bind="gardenInfo.link"></span>
+                        </a>
+                        <span class="carouseCity-third-theme">
+                        <img  src="backStageManage/companyShowManage/image/up.jpg" />
+                        <img  src="backStageManage/companyShowManage/image/down.jpg" />
+                    </span>
+                        <span class="carouseCity-fourth-theme">
+                        <button ui-sref="backStageManage.canalManage.addGardenInfo({cityId:cityId,type:publicityType,gardenInfoId:gardenInfo.id,cityName:cityName})">编辑</button>
+                        <button class="con_del_btn" ng-click="deletePublicity(gardenInfo.id)">删除</button>
+                    </span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

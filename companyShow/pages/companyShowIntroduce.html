@@ -1,0 +1,47 @@
+<style>
+    .company_introduce_right p {
+        font-size:12px;
+        line-height: 24px;
+    }
+</style>
+<div class="company_introduce">
+    <div class="company_introduce_left">
+        <div class="company_introduce_logo ">
+            <img data-ui-lazyload="{{companyInfo.logoSrc}}" style="width: 150px;height: 80px;" />
+        </div>
+        <div class="company_introduce_msg">
+            <ul>
+                <li title="{{companyInfo.name}}">公司名称：{{companyInfo.name}}</li>
+                <li title="{{companyInfo.address}}">公司地址：{{companyInfo.address}}</li>
+                <li title="{{companyInfo.mode}}">经营模式：{{companyInfo.mode}}</li>
+                <li title="{{companyInfo.range}}">经营范围：{{companyInfo.range}}</li>
+                <li title="{{companyInfo.contact}}">联系人：{{companyInfo.contact}}</li>
+                <li title="{{companyInfo.phone}}">联系电话：{{companyInfo.phone}}</li>
+                <li title="{{companyInfo.web}}">公司网址：<a ng-href="{{companyInfo.web}}" target="_blank">{{companyInfo.web}}</a></li>
+            </ul>
+        </div>
+        <!--<div class="company_introduce_icon">-->
+            <!--<div class="icon_good">-->
+                <!--&lt;!&ndash;<img src="home-page/images/company/icon-good.png">&ndash;&gt;-->
+                <!--<i style="vertical-align: middle;" ng-click="submitAttitude()" class="companyShow_info_good" ng-class="{'companyShow_info_good_active':isLiked}" ></i>-->
+                <!--<span style="border: 0;vertical-align: middle;">{{attitudeNum}}</span>-->
+            <!--</div>-->
+            <!--<div class="icon_collect">-->
+                <!--<img style="border: 0;vertical-align: middle;" data-ui-lazyload="home-page/images/company/icon-collect.png">-->
+                <!--&lt;!&ndash;<span style="border: 0;vertical-align: middle;">收藏</span>&ndash;&gt;-->
+            <!--</div>-->
+            <!--<div class="icon_email">-->
+                <!--<img style="border: 0;vertical-align: middle; cursor: pointer;" ng-click="sendMail()" data-ui-lazyload="home-page/images/company/icon-email.png">-->
+                <!--<span style="vertical-align: middle;">邮件</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div class="company_introduce_right">
+        <div class="right_con">
+            <p>公司简介</p>
+            <p>{{companyInfo.introduce}}</p>
+            <p style="margin-top: 50px;">公司业绩</p>
+            <p>{{companyInfo.achievement}}</p>
+        </div>
+    </div>
+</div>

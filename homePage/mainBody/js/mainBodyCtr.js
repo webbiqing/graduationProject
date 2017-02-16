@@ -4,7 +4,7 @@
 App.controller('mainBodyCtr', function($rootScope, $scope) {
     //启动首页主轮播
     (function () {
-        var scrollDuration = 1000;
+        var scrollDuration = 2000;
         var easeInCubic = 'quadratic';
         //	small images carousel
         $('#carousel-small').carouFredSel({
@@ -21,7 +21,7 @@ App.controller('mainBodyCtr', function($rootScope, $scope) {
             scroll: {
                 fx: 'directscroll',
                 duration: scrollDuration,
-                timeoutDuration: 1500,
+                timeoutDuration: 4000,
                 easing: easeInCubic,
                 onBefore: function (data) {
                     data.items.old.animate({

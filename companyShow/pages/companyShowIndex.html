@@ -1,0 +1,129 @@
+<div class="companyShow_info">
+    <div class="companyShow_info_logo fl">
+        <!--<img style="width: 170px;height: 93px;margin-bottom: 60px" src="image/company/companyShow-logo.png"  />-->
+        <img style="width: 170px;height: 93px;" data-ui-lazyload="{{companyInfo.logoSrc}}"  />
+        <div class="companyShow_info_icon">
+            <!--<i class="companyShow_info_good"></i><span>15</span>-->
+            <!--<em><i style="vertical-align: middle" ng-click="submitAttitude()" class="companyShow_info_good" ng-class="{'companyShow_info_good_active':isLiked}"></i><span style="vertical-align: middle">{{attitudeNum}}</span></em>-->
+            <!--<em style="cursor: pointer;"><i class="companyShow_info_collect" style="vertical-align: middle"></i><span style="vertical-align: middle">收藏</span></em>-->
+            <!--<em style="cursor: pointer;" ><i ng-click="sendMail(companyId,companyInfo.companyUserName)" class="companyShow_info_email" style="vertical-align: middle" ></i><span style="vertical-align: middle">邮件</span></em>-->
+        </div>
+    </div>
+        <div class="companyShow_info_detail fl">
+        <div class="companyShow_info_detail_item">
+            <span class="companyShow_info_detail_title">公司名称:</span><span title="{{companyInfo.name}}" class="company_card_item">{{companyInfo.name}}</span>
+        </div>
+        <div class="companyShow_info_detail_item">
+            <span class="companyShow_info_detail_title">公司地址:</span><span title="{{companyInfo.address}}" class="company_card_item">{{companyInfo.address}}</span>
+        </div>
+        <div class="companyShow_info_detail_item">
+            <span class="companyShow_info_detail_title">经营模式:</span><span title="{{companyInfo.mode}}" class="company_card_item">{{companyInfo.mode}}</span>
+        </div>
+        <div class="companyShow_info_detail_item">
+            <span class="companyShow_info_detail_title">经营范围:</span><span title="{{companyInfo.range}}" class="company_card_item">{{companyInfo.range}}</span>
+        </div>
+        <div class="companyShow_info_detail_item">
+            <span class="companyShow_info_detail_title">联系人:</span><span title="{{companyInfo.contact}}" class="company_card_item">{{companyInfo.contact}}</span>
+        </div>
+        <div class="companyShow_info_detail_item">
+            <span class="companyShow_info_detail_title">联系电话:</span><span title="{{companyInfo.phone}}" class="company_card_item">{{companyInfo.phone}}</span>
+        </div>
+        <div class="companyShow_info_detail_item">
+            <span class="companyShow_info_detail_title">公司网址:</span><span title="{{companyInfo.web}}" class="company_card_item"><a ng-href="{{companyInfo.web}}" target="_blank">{{companyInfo.web}}</a></span>
+        </div>
+    </div>
+
+    <div class="companyShow_info_content fl">
+        <ul class="companyShow_supdem_list">
+            <li ng-repeat="supplyInfo in supplyInfos">
+                <a style="display: inline-block; width: 200px; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;" title="{{supplyInfo.title}}" href="#/homepage/content/showContentDetails/{{supplyInfo.article_id}}?templateId={{supplyInfo.template_id}}" target="_blank">
+                    {{supplyInfo.title}}
+                </a>
+                <span class="right">{{supplyInfo.create_date | date:'yyyy-MM-dd'}}</span>
+            </li>
+            <!--<li><span>发布***产品采购需求</span><span class="right">2016年10月11日</span></li>
+            <li><span>发布***产品采购需求</span><span class="right">2016年10月11日</span></li>-->
+        </ul>
+    </div>
+</div>
+
+<div class="company_product">
+    <div class="company_product_title">
+        <div><i></i><span>公司产品</span><div></div>
+        </div>
+    </div>
+    <div class="company_product_content">
+        <!--<div class="company_product_item fl" ng-repeat="product in products">-->
+            <!--<div class="company_product_img"></div>-->
+            <!--<div class="company_product_info">-->
+                <!--<p>机器人智能焊接技术</p>-->
+                <!--<span>产品简介说明产品简介说明产品简介说明产品简介说明产品简介说明</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="company_product_item fl" ng-repeat="product in products">
+            <div class="company_product_img"><img data-ui-lazyload="{{product.service_img_url}}" alt="" style="display: block; height: 198px; width: 198px;"></div>
+            <div class="company_product_info">
+                <p>{{product.service_name}}</p>
+                <span>{{product.service_desc}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="company_product">
+    <div class="company_product_title">
+        <div><i></i><span>公司服务</span><div></div>
+        </div>
+    </div>
+    <div class="company_product_content">
+        <!--<div class="company_product_item fl" ng-repeat="product in products">-->
+        <!--<div class="company_product_img"></div>-->
+        <!--<div class="company_product_info">-->
+        <!--<p>机器人智能焊接技术</p>-->
+        <!--<span>产品简介说明产品简介说明产品简介说明产品简介说明产品简介说明</span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="company_product_item fl" ng-repeat="service in services">
+            <div class="company_product_img"><img data-ui-lazyload="{{service.service_img_url}}" alt="" style="display: block; height: 198px; width: 198px;"></div>
+            <div class="company_product_info">
+                <p>{{service.service_name}}</p>
+                <span>{{service.service_desc}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 450px;width: 1280px;    margin-top: 30px; margin-left: auto;margin-right: auto;margin-bottom: 40px;">
+    <div class="company_achievement fl">
+        <div class="company_achievement_title">
+            <i></i>
+            <span>公司动态</span>
+            <span style="font-size:12px; float:right; color:#999; cursor:pointer; margin-right: 60px;" ui-sref="homepage.companyShow.companyDynamic" ng-click="$parent.navItemIndex = 4">更多>></span>
+        </div>
+        <div class="company_achievement_content">
+            <ul>
+                <li ng-repeat="dynamic in dynamics">
+                    <a href="#/homepage/companyShow/{{companyId}}/companyDynamicDetail?dynamicId={{dynamic.id}}" target="_blank" title="{{dynamic.title}}" style="display:inline-block; cursor:pointer; margin-bottom:-5px; width: 300px; line-height:18px; height:18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{dynamic.title}}</a>
+                    <span class="right">{{dynamic.update_date | date:"yyyy-MM-dd"}}</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="company_honor fl">
+        <div class="company_honor_title">
+            <i></i>
+            <span>公司荣誉</span>
+        </div>
+        <div class="company_honor_content">
+            <!--<div class="company_honor_item fl" style="margin-top: 0px;" ng-repeat="honourData in companyData.companyHonour">-->
+                <!--<div class="company_honor_img"><img ng-src="{{honourData.img}}" alt="荣誉证书"/></div>-->
+                <!--<div style="width:150px;height: 30px;line-height: 30px;font-size: 12px;text-align: center;">-->
+                    <!--<span>{{honourData.text}}</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="company_honor_item fl" style="margin-top: 0px;" ng-repeat="honorInfo in honorInfos">
+                <div class="company_honor_img"><img data-ui-lazyload="{{honorInfo.image_url}}" alt=""/></div>
+                <div style="width:150px;height: 30px;line-height: 30px;font-size: 12px;text-align: center;">
+                    <span>{{honorInfo.image_desc}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

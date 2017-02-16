@@ -23,6 +23,7 @@
 .topBarContainer .topBar-ul{
     margin-left: 40px;
     font-weight: 100;
+    width: 340px;
 }
 .topBar-ul li{
     height: 100px;

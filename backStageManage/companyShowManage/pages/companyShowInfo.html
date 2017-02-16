@@ -1,295 +1,49 @@
-
-<div class="expo_content">
-    <div class="_top">
-        <span>企业展示信息</span>
-        <button ng-click="viewInfo()" style="outline: none;">查看</button>
+<div class="canal-city-container">
+    <div class="canal-cityName clearF">
+        <span class="title">公司及展会管理</span>
+        <button class="review">预览</button>
     </div>
-    <!--企业名片信息-->
-    <div class="show_panel">
-        <div class="card_top">
-            <img src="backStageManage/companyShowManage/image/commonshow_07.png" />
-            <span>企业名片</span>
-            <img class="right"  src="backStageManage/companyShowManage/image/introduce_ico.png"  style="display: none"/>
+    <div class="canal-city-main">
+        <div class="canal-city-main-top">
+            <span class="col-md-4">公司及展会管理模块</span>
+            <span class="col-md-4 city-main-middle">操作</span>
+            <span class="col-md-4 city-main-last">完成状态</span>
         </div>
-        <div class="card_text">
-            <div class="fl">
-                <img  src=""  style="height: 120px; width: 170px; display: block"/>
-            </div>
-            <div class="fl card_detail">
-                <table>
-                    <tbody>
-                    <tr>
-                        <td width="80px"><b>公司名称：</b></td>
-                        <td width="260px">
-                            <!--<span ng-show="!card_edit">{{cardInfo.name}}</span>-->
-                            <input type="text" ng-show="card_edit" ng-model="temp.name" /></td>
-                        <td width="100px"><b>公司地址：</b></td>
-                        <td width="250px">
-                            <!--<span ng-show="!card_edit">{{cardInfo.address}}</span>-->
-                            <input type="text" ng-show="card_edit" ng-model="temp.address" /></td>
-                    </tr>
-                    <tr>
-                        <td><b>经营模式：</b></td>
-                        <td>
-                            <!--<span ng-show="!card_edit">{{cardInfo.mode}}</span>-->
-                            <input type="text" ng-show="card_edit" ng-model="temp.mode" /></td>
-                        <td><b>经营范围：</b></td>
-                        <td>
-                            <!--<span ng-show="!card_edit">{{cardInfo.range}}</span>-->
-                            <input type="text" ng-show="card_edit" ng-model="temp.range" /></td>
-                    </tr>
-                    <tr>
-                        <td><b>联&nbsp;系&nbsp;人：</b></td>
-                        <td>
-                            <!--<span ng-show="!card_edit">{{cardInfo.contact}}</span>-->
-                            <input  type="text" ng-show="card_edit" ng-model="temp.contact"  /></td>
-                        <td><b>联系电话：</b></td>
-                        <td>
-                            <!--<span ng-show="!card_edit">{{cardInfo.phone}}</span>-->
-                            <input type="text" ng-show="card_edit" ng-model="temp.phone"  /></td>
-                    </tr>
-                    <tr>
-                        <td><b>公司网址：</b></td>
-                        <td>
-                            <!--<span ng-show="!card_edit">{{cardInfo.web}}</span>-->
-                            <input ng-show="card_edit" type="text" ng-model="temp.web"  /></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-                <p class="card_detail_btns" style="text-align: center; margin-top: 10px" ng-show="card_edit">
-                    <button ng-click="update_card()">保存</button>
-                    <button ng-click="cancel_edit()">取消</button>
-                </p>
-            </div>
-
+        <div class="canal-city-main-list">
+            <span class="col-md-4">企业名片</span>
+            <span class="col-md-4 city-main-middle">
+                <button ui-sref="homePage.backStage.companyInfoManage">编辑</button>
+            </span>
+            <span class="col-md-4 col-md-4-last">
+                <img src="backStageManage/companyShowManage/image/canal_city_icon1.png" alt="">
+            </span>
+        </div>
+        <div class="canal-city-main-list">
+            <span class="col-md-4">企业宣传栏</span>
+            <span class="col-md-4 city-main-middle">
+                <button ui-sref="homePage.backStage.carouselManage">编辑</button>
+            </span>
+            <span class="col-md-4 col-md-4-last">
+                <img src="backStageManage/companyShowManage/image/canal_city_icon1.png" alt="">
+            </span>
+        </div>
+        <div class="canal-city-main-list">
+            <span class="col-md-4">主营产品</span>
+            <span class="col-md-4 city-main-middle">
+                <button ui-sref="homePage.backStage.productManage">编辑</button>
+            </span>
+            <span class="col-md-4 col-md-4-last">
+                <img src="backStageManage/companyShowManage/image/canal_city_icon1.png" alt="">
+            </span>
+        </div>
+        <div class="canal-city-main-list">
+            <span class="col-md-4">企业荣誉</span>
+            <span class="col-md-4 city-main-middle">
+                <button ui-sref="homePage.backStage.companyHonourManage">编辑</button>
+            </span>
+            <span class="col-md-4 col-md-4-last">
+                <img src="backStageManage/companyShowManage/image/canal_city_icon1.png" alt="">
+            </span>
         </div>
     </div>
-
-    <!--企业宣传栏-->
-    <div class="show_panel">
-        <p class="relative">
-            <img src="backStageManage/companyShowManage/image/commonshow_13.png" />企业宣传栏
-            <label class="ab_right">(上传图片限6张,大小340*1280px)</label>
-        </p>
-        <div class="advertise" ng-repeat="image in images">
-            <div ng-mouseover="show_delete=true" ng-mouseleave="show_delete=false">
-                <img class="advertise_img"  ng-src="{{image.image_url}}" />
-                <p>{{image.image_desc}}</p>
-                <img ng-show="show_delete" class="image_delete" ng-click="deleteBannerImg(image)" src="image/delete.png" />
-            </div>
-        </div>
-        <p style="font-size:10px; color:#f00; text-align: center; line-height: 16px;" ng-show="oUpper.isBanner">上传图片数量已经达到上限6张</p>
-        <div class="add_img">
-            <input id="fileLoad1" name="file_upload1" type="file" file-model="myFile1" img-Url="imageFront" ng-model="imageFront"  required/>
-            <div style="filter:alpha(opacity=0);width: 930px; height: 50px; background:#fff; position: absolute; z-index: 99; opacity: 0; left:0; top:0;" ng-if="oUpper.isBanner"></div>
-        </div>
-    </div>
-    <!--主营业务-->
-    <div class="mainBusiness show_panel">
-        <p class="relative">
-            <img src="backStageManage/companyShowManage/image/commonshow_16.png" />主营业务
-            <label class="ab_right">(产品服务请根据公司自身情况选择填写)</label>
-        </p>
-        <div class="mainBuss-add-con">
-            <div class="_mainBuss-add"><b>产品</b>（新增产品限制8个）</div>
-            <div class="mainBuss-show" style="position: relative">
-                <div style="position: relative;overflow: hidden;" class="mainBuss-showInfo" ng-repeat="product in products"  ng-class="{'mainBuss-show-add':product.isAdd}">
-                    <img ng-src="{{product.service_img_url}}" alt="" ng-hide="product.isAdd" />
-                    <img ng-src="{{product.service_img_url}}" alt="" ng-show="product.isAdd" style="cursor:pointer" />
-                    <div style="position: absolute; z-index:99;top:0; left: 0; width:165px; height: 140px; overflow: hidden;">
-                        <input ng-show="product.isAdd"  type="file" name="file_upload3" file-model="myEditProductFile" img-Url="product.service_img_url" ng-model="product.service_img_url" style="margin-left:-10px; font-size:1000px; width: 175px; height: 125px; line-height:normal; opacity:0; cursor:pointer">
-                    </div>
-                    <div class="showInfo_product">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>名称:</td>
-                                <td class="td_info" ng-hide="product.isAdd">{{product.service_name}}</td>
-                                <td class="td_info" ng-show="product.isAdd"><input type="text" style="width: 100%;padding-left: 5px;border-radius: 5px;border:1px solid gray;font-size: 12px;" ng-model="product.service_name"/></td>
-                            </tr>
-                            <tr>
-                                <td>介绍:</td>
-                                <td class="td_info" ng-hide="product.isAdd">{{product.service_desc}}</td>
-                                <td class="td_info" ng-show="product.isAdd"><textarea name="" placeholder="产品简介(50个字以内)" style="width: 100%;resize: none;font-size: 12px;padding-left: 5px;border-radius: 5px;border:1px solid gray;" ng-model="product.service_desc" maxlength="50"></textarea></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="product_add_del" ng-hide="product.isAdd" class="margin-top:100px;">
-                            <span style="cursor:pointer" ng-click="productEdit(product)"><img src="backStageManage/companyShowManage/image/bussine_06.png" alt=""/></span>
-                            <span style="cursor:pointer" ng-click="productDelete(product.service_id)"><img src="backStageManage/companyShowManage/image/bussine_08.png" alt=""/></span>
-                        </div>
-                        <div class="add-btns card_detail_btns" ng-show="product.isAdd" style="position: absolute;bottom:-20px">
-                            <button ng-click="saveProductEdit(product,$index)">保存</button>
-                            <button ng-click="cancelProductEdit(product)">取消</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainBuss-show-add mainBuss-showInfo" ng-show="add_pros">
-                    <div class="product-img" style="position: relative;overflow: hidden;">
-                        <img id="addProduct" ng-src="{{addProduct.url}}" alt="" style="display: block; width: 165px;height: 125px;" ng-class="{'error_border':!addProduct.url&&isDirty}"/>
-                        <input type="file" name="file_upload5" file-model="myAddProducttFile" img-Url="addProduct.url" ng-model="addProduct.url" style="position: absolute; z-index:99;top:0; left:-10px;  font-size:1000px; width: 175px; line-height:normal; height: 125px; opacity:0; cursor:pointer">
-                    </div>
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>名称:</td>
-                            <td class="td_info"><input type="text" style="width: 100%;padding-left: 5px; border-radius: 5px;border:1px solid gray;font-size: 12px;" ng-model="addProduct.name" ng-class="{'error_border':!addProduct.name&&isDirty}" maxlength="10" placeholder="产品名称(限10个字)"/></td>
-                        </tr>
-                        <tr>
-                            <td>介绍:</td>
-                            <td class="td_info"><textarea name="" placeholder="产品简介(50个字以内)" style="width: 100%;resize: none;font-size: 12px;padding-left: 5px;border-radius: 5px;border:1px solid gray;" ng-model="addProduct.desc" ng-class="{'error_border':!addProduct.desc&&isDirty}" maxlength="50"></textarea></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="add-btns card_detail_btns">
-                        <button ng-click="saveAddProduct()">保存</button>
-                        <button ng-click="cancelAddProduct()">取消</button>
-                    </div>
-                </div>
-            </div>
-            <div class="add-pro-btn" ng-click="isShow_pros()">+新增产品</div>
-        </div>
-        <div class="mainBuss-add-con">
-            <div class="_mainBuss-add"><b>服务</b>（新增服务限制8个）</div>
-            <div class="mainBuss-show" style="position: relative">
-                <div class="mainBuss-showInfo" style="position: relative;overflow: hidden;" ng-repeat="service in services" ng-class="{'mainBuss-show-add':service.isAdd}">
-                    <img ng-src="{{service.service_img_url}}" alt="" ng-hide="service.isAdd"/>
-                    <img ng-src="{{service.service_img_url}}" alt="" ng-show="service.isAdd" style="cursor:pointer"/>
-                    <div style="position: absolute; z-index:99;top:0; left: 0; width:165px; height: 140px; overflow: hidden;">
-                        <input ng-show="service.isAdd" type="file" name="file_upload4" file-model="myEditServiceFile" img-Url="service.service_img_url" ng-model="service.service_img_url" style=" font-size:1000px; margin-left:-10px; width: 175px; height: 140px; opacity:0; cursor:pointer;line-height: normal;">
-                    </div>
-                    <div class="showInfo_product">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>对象:</td>
-                                <td class="td_info" ng-hide="service.isAdd">{{service.service_name}}</td>
-                                <td class="td_info" ng-show="service.isAdd"><input ng-model="service.service_name" type="text" style="width: 100%;padding-left: 5px;border-radius: 5px;border:1px solid gray;font-size: 12px;"/></td>
-                            </tr>
-                            <tr>
-                                <td>介绍:</td>
-                                <td class="td_info" ng-hide="service.isAdd">{{service.service_desc}}</td>
-                                <td class="td_info" ng-show="service.isAdd"><textarea name="" ng-model="service.service_desc" placeholder="服务内容(50个字以内)" style="width: 100%;resize: none;border-radius: 5px;border:1px solid gray;font-size: 12px;padding-left: 5px;" maxlength="50"></textarea></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="product_add_del" ng-hide="service.isAdd">
-                            <span style="cursor:pointer" ng-click="serviceEdit(service)"><img src="backStageManage/companyShowManage/image/bussine_06.png" alt=""/></span>
-                            <span style="cursor:pointer" ng-click="serviceDelete(service.service_id)"><img src="backStageManage/companyShowManage/image/bussine_08.png" alt=""/></span>
-                        </div>
-                        <div class="add-btns card_detail_btns" ng-show="service.isAdd" style="position: absolute;bottom:-20px">
-                            <button ng-click="saveServiceEdit(service,$index)">保存</button>
-                            <button ng-click="cancelServiceEdit(service)">取消</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainBuss-show-add mainBuss-showInfo" ng-show="add_service">
-                    <div class="product-img" style="position:relative;overflow: hidden;">
-                        <img id="addService" ng-src="{{addService.url}}" alt="" style="display: block; width: 165px;height: 125px;" ng-class="{'error_border':!addService.url&&isDirty_service}" />
-                        <input type="file" name="file_upload6" file-model="myAddServiceFile" img-Url="addService.url" ng-model="addService.url" style="position: absolute; z-index:99;top:0; left:-10px; font-size:1000px; width: 175px; height: 125px; line-height:normal; opacity:0; cursor:pointer">
-                    </div>
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>名称:</td>
-                            <td class="td_info"><input type="text" style="width: 100%;padding-left: 5px;border-radius: 5px;border:1px solid gray;font-size: 12px;" ng-model="addService.name" ng-class="{'error_border':!addService.name&&isDirty_service}" maxlength="10" placeholder="服务名称(限10个字)"/></td>
-                        </tr>
-                        <tr>
-                            <td>介绍:</td>
-                            <td class="td_info"><textarea name="" placeholder="服务内容(50个字以内)" style="width: 100%;resize: none;border-radius: 5px;border:1px solid gray;font-size: 12px;padding-left: 5px;" ng-model="addService.desc" maxlength="50" ng-class="{'error_border':!addService.desc&&isDirty_service}"></textarea></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="add-btns card_detail_btns">
-                        <button ng-click="saveAddService()">保存</button>
-                        <button ng-click="cancelAddService()">取消</button>
-                    </div>
-                </div>
-                <p ng-show="isUpObj.product" style="color:#f00">产品数量已经达到8个，不能添加产品</p>
-            </div>
-            <div class="add-pro-btn" ng-click="isShow_service()">+新增服务</div>
-        </div>
-    </div>
-    <!--公司介绍-->
-    <div class="show_panel">
-        <div class="panel_title">
-            <img src="backStageManage/companyShowManage/image/ico_company.jpg" />
-            <span>公司介绍</span>
-        </div>
-        <ul class="comp_ul">
-            <li class="comp_introduce">
-                <span>公司简介</span>
-                <div class="introduce_ico" ng-click="myVars1()">
-                    <img src="backStageManage/companyShowManage/image/introduce_ico.jpg">
-                </div>
-            </li>
-            <li class="comp_text1" ng-show="myVar1">
-         <span>
-            {{cardInfo.introduce}}
-         </span>
-            </li>
-            <li class="comp_text2" ng-hide="myVar1">
-                <div>
-                    <textarea cols="115" rows="5" style="resize: none;padding-left: 5px;border-radius: 5px;border:1px solid gray;" placeholder="请输入公司简介，字数400以内" ng-model="copy_comIntro" maxlength="400"></textarea>
-                </div>
-                <div class="btns">
-                    <button ng-click="saveCmIntroduce()">保存</button>
-                    <button ng-click="isCancel_ComIntro()" >取消</button>
-                </div>
-            </li>
-            <li class="comp_introduce">
-                <span>公司业绩</span>
-                <div class="introduce_ico">
-                    <img src="backStageManage/companyShowManage/image/introduce_ico.jpg" ng-click="myVars2()">
-                </div>
-            </li>
-            <li class="comp_text1" ng-show="myVar2">
-                 <span>
-                    {{cardInfo.achievement}}
-                 </span>
-            </li>
-            <li class="comp_text2" ng-show="!myVar2">
-                <div >
-                    <textarea cols="115" rows="5" style="resize: none;padding-left: 5px;border-radius: 5px;border:1px solid gray;" placeholder="请输入公司取得的业绩及其荣誉信息，字数300以内" ng-model="copy_comAchiev" maxlength="300" ></textarea>
-                </div>
-                <div class="btns">
-                    <button ng-click="saveComInfo()">保存</button>
-                    <button ng-click="isCancel_ComInfo()">取消</button>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!--企业荣誉-->
-    <div class="show_panel">
-        <div class="panel_title">
-            <img src="backStageManage/companyShowManage/image/ico_honer.jpg" />
-            <span>企业荣誉</span>
-            <label>(上传企业荣誉照片,限制8张)</label>
-        </div>
-        <div class="honer_images">
-            <ul class="list-inline">
-                <li  ng-repeat="honorInfo in honorInfos" style="background-color: #fff; position: relative;" ng-mouseenter="honorImageDelete=true" ng-mouseleave="honorImageDelete=false">
-                    <div >
-                        <img src={{honorInfo.image_url}} >
-                    </div>
-                    <div style="height: 35px;">
-                        {{honorInfo.image_desc}}
-                    </div>
-                    <img  ng-show="honorImageDelete" style="cursor: pointer;" class="image_delete" ng-click="deleteBannerImg(honorInfo)" src="image/delete.png" />
-                </li>
-                <li class="honer_filePush" ng-hide="oUpper.isHonor">
-                    <div style="cursor: pointer;position: relative;overflow: hidden;">
-                        <img style="display: block; width: 225px; height: 140px;" ng-src="{{addHonorImg||addHonorImgDefault}}" alt="">
-                        <input type="file" name="file_upload2" file-model="myHonorFile" img-Url="addHonorImg" ng-model="addHonorImg" style="position: absolute; z-index:99;top:0; left:-10px; font-size:1200px; width: 230px; height: 140px; line-height:normal; opacity:0; cursor:pointer">
-                    </div>
-                    <div style="cursor: pointer" ng-click="uploadHonorImg()" >
-                        上传图片
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
 </div>

@@ -1,0 +1,57 @@
+<style>
+    .bestCompany-fifth-theme .con_edit_btn{
+        background-color: #4f9fdc;
+        width: 65px;
+        height: 26px;
+        border-radius: 5px;
+        color: #FFFFFF;
+        border: none;
+        outline: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .bestCompany-table thead{
+        display: none;
+    }
+</style>
+<div class="canal-city-container">
+    <div class="canal-cityName">
+        <span>公司荣誉</span>
+        <a href="javascript:;" ui-sref="homePage.backStage.companyShow">返回</a>
+    </div>
+    <div class="carouseCity-main">
+        <div class="carouseCity-top">
+            <span>公司荣誉列表</span>
+            <button ui-sref="homePage.backStage.addCompanyHonour">添加</button>
+        </div>
+        <div class="bestCompany-list-top carouseCity-list-top">
+            <span class="bestCompany-first-theme">公司荣誉信息</span>
+            <span class="bestCompany-fourth-theme">排序</span>
+            <span class="bestCompany-fifth-theme">操作</span>
+        </div>
+        <table ng-table="tableParams" class="bestCompany-table">
+            <tbody>
+            <tr>
+                <td>
+                    <div class="bestCompany-list">
+                            <span class="bestCompany-first-theme">
+                               <div class="bestCompany-imgBox"> <img ng-src="{{bestCompanyList.img_url}}" alt=""></div>
+                                <span class="carouseCity-list-main" title="{{bestCompanyList.company_name}}">
+                                    {{bestCompanyList.company_name}}
+                                </span>
+                            </span>
+                        <span class="bestCompany-fourth-theme">
+                                <img src="backStageManage/companyShowManage/image/up.jpg"  ng-click="moveUpBestCompany($index,bestCompanyList.company_id)">
+                                <img src="backStageManage/companyShowManage/image/down.jpg"  ng-click="moveDownBestCompany($index,bestCompanyList.company_id)">
+                            </span>
+                        <span class="bestCompany-fifth-theme" >
+                                <button class="con_edit_btn" ui-sref="backStageManage.oborManage.addOborBestCompany({exhibitionId:exhibitionId,exhibitionName:exhibitionName,company_id:bestCompanyList.company_id})">编辑</button>
+                                <button class="con_del_btn" ng-click="deleteBestCompany(bestCompanyList.company_id)">移除</button>
+                            </span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

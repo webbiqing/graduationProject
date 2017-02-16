@@ -1,0 +1,35 @@
+<div class="canal-city-container">
+    <div class="canal-cityName">
+        <span>企业轮播图管理</span>
+        <a href="javascript:;" ui-sref="homePage.backStage.companyShow">返回</a>
+    </div>
+    <div class="carouseCity-main">
+        <div class="carouseCity-top">
+            <span>企业轮播图管理（最多添加6条）</span>
+            <button ui-sref="homePage.backStage.addCarousel" ng-disabled="carouseCityList.length>=6" ng-class="{'gray_btn':carouseCityList.length>=6}">添加</button>
+        </div>
+        <div class="carouseCity-list-top">
+            <span class="carouseCity-first-theme">轮换信息</span>
+            <span class="carouseCity-second-theme">链接</span>
+            <span class="carouseCity-third-theme">排序</span>
+            <span class="carouseCity-fourth-theme">操作</span>
+        </div>
+        <div class="carouseCity-list">
+            <span class="carouseCity-first-theme">
+                <div class="carouse-img-box"><img ng-src="" alt=""></div>
+                <span class="carouseCity-list-main">sdfghsdfghdsfg</span>
+            </span>
+            <a href="#" target="_blank">
+                <span class="carouseCity-second-theme" ></span>
+            </a>
+            <span class="carouseCity-third-theme">
+                <img src="backStageManage/companyShowManage/image/up.jpg" style="cursor: pointer;" >
+                <img src="backStageManage/companyShowManage/image/down.jpg" style="cursor: pointer;" >
+            </span>
+            <span class="carouseCity-fourth-theme">
+                <button ui-sref="backStageManage.canalManage.addCarouseCity({cityId:cityId,carouseId:carouseCity.id,cityName:cityName})">编辑</button>
+                <button class="con_del_btn" >删除</button>
+            </span>
+        </div>
+    </div>
+</div>

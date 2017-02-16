@@ -1,340 +1,934 @@
-
-/*管理页面css*/
-.expo_content{
-    width: 978px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-    font-family: "微软雅黑", "Microsoft YaHei", "Arial";
-    color: #2e2e2e;
-    padding-bottom: 30px;
-    margin-bottom: 40px;
+.canal-city-container {
+    width: 845px;
+    margin: 30px auto;
 }
-.expo_content textarea{
-    font-size: 14px;
-    width: 100%;
+.canal-city-container button{
+    background-color: rgba(0, 0, 0, 0.75) !important;
 }
-.expo_content ._top{
-    padding-bottom:15px;
+.canal-city-container button:hover{
+    background-color:#ddb321 !important;
+    color: #000000 !important;
 }
-.expo_content ._top>span{
-    font-size:16px;
+.canal-city-container .canal-cityName {
+    font-size: 16px;
+    border-bottom: 1px solid #bfbfbf;
+    margin-bottom: 20px;
 }
-.expo_content ._top>button{
-    height:25px;
-    width: 65px;
-    border: none;
-    border-radius: 25px;
-    color: #ffffff;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.75);;
-    float: right;
-    margin-top: -2px;
+.canal-city-container .canal-cityName span{
+    line-height: 43px;
 }
-.show_panel{
-    border-radius: 5px;
-    background-color: #FFFFFF;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-.show_panel .card_top .right{
-    float: right;
-    margin-right: 10px;
-}
-.card_detail{
-    width: 700px;
-    height: 200px;
-    margin-left: 50px;
-}
-.card_detail label{
-    width: 70px;
-    text-align: right;
-    margin-left: 10px;
-}
-.card_detail input{
-    padding-left: 5px;
-}
-.card_detail_btns button{
-    width: 85px;
-    height: 30px;
-    border-radius:13px;
-    border: 1px solid #000000;
-    background-color: #ffffff;
-    margin-right:10px;
-    outline: none;
-}
-.card_detail_btns button:hover{
-    border: none;
-    background-color:rgba(0, 0, 0, 0.75);
+.review{
+    background-color: rgba(0, 0, 0, 0.75);
     color: #FFFFFF;
-}
-.card_text{
-    height: 200px;
-    padding: 10px;
-}
-.card_text .card_detail table input{
-    width: 100%;
-}
-.card_top{
-    margin-bottom: 20px;
-}
-.card_top img{
-    display: inline-block;
-    margin-right:5px;
-}
-.card_top:nth-child(1){
-    cursor: pointer;
-}
-.input_disable{
-    border: 0px;
-}
-.ab_right
-{
-    position: absolute;
-    right: 0px;
-}
-.relative img{
-    display: inline-block;
-    margin-right: 5px;
-}
-.relative{
-    margin-bottom: 20px;
-}
-.advertise{
-    position: relative;
-    display: inline-block;
-    text-align: center;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
     margin-left: 10px;
-    cursor: pointer;
+    margin-bottom: 10px;
+    float: right;
 }
-.advertise_img{
-    width: 460px;
-    height: 140px;
+.canal-city-container .col-list {
+    width: 32%;
+    text-indent: 15px;
 }
-.image_delete{
-    position: absolute;
-    top: 115px;
-    right: 5px;
+
+.canal-city-container .col-md-4-last {
+    text-align: right;
 }
-.add_img{
-    text-align:center;
-    width:930px;
-    height: 50px;
-    line-height: 50px;
-    position:relative;
-    color: #5B96D1;
-    overflow: hidden;
-    margin-left:10px;
-    cursor: pointer;
-    background:url("company/image/addPic_03.png")  center;
+
+.canal-city-container .canal-city-main {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 5px;
+    text-indent: 15px;
 }
-.add_img input{
-    width:940px;
-    left: -10px;
-    height: 50px;
-    z-index:1;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    cursor: pointer;
-    line-height: normal;
-    position: absolute;
-    font-size:500px;
-}
-/*主营业务*/
-.mainBuss-add-con{
-    margin-bottom: 20px;
-}
-.mainBuss-add-con .add-pro-btn{
-    height: 50px;
-    width: 100%;
+
+.canal-city-container .canal-city-main-top {
     background-color: #eeeeee;
-    text-align: center;
-    line-height: 50px;
-    color: rgba(0, 0, 0, 0.75);;
-    margin:10px 0;
-    cursor:pointer;
+    height: 26px;
+    line-height: 26px;
 }
-._mainBuss-add{
-    background-color:#dfdfdf;
-    height:38px;
-    line-height:38px;
-    padding-left:14px;
-    margin-bottom: 15px;
+
+.canal-city-container .canal-city-main-top .col-list {
+    height: 26px;
 }
-.mainBuss-show{
-    overflow: hidden;
-}
-.mainBuss-show .showInfo_product{
-    width: 280px;
-    height: 125px;
-    display: inline-block;
-    position: absolute;
-}
-.mainBuss-show img{
-    display: inline-block;
-    width: 165px;
-    height: 125px;
-    margin-right:10px;
-}
-.mainBuss-showInfo{
-    height:172px;
-    padding: 3px;
-    float: left;
-    width: 460px;
-}
-.mainBuss-showInfo table{
-    display: inline-block;
-    margin-top: -45px;
-}
-.mainBuss-showInfo table td{
-    height: 25px;
-    vertical-align: top;
-}
-.mainBuss-showInfo table .td_info{
-    width: 235px;
-    padding-left: 5px;
-}
-.mainBuss-showInfo .product_add_del{
-    position: absolute;
-    bottom: 0px;
-}
-.mainBuss-showInfo .product_add_del img{
-    display: inline-block;
-    margin-right:5px;
-    width: 15px;
-    height: 17px;
-}
-.mainBuss-show-add{
-    float: left;
-    position: relative;
-}
-.mainBuss-showInfo table{
-    position: absolute;
-    top:50px;
-    margin-left: 5px;
-}
-.mainBuss-show-add{
-    padding: 5px;
-}
-.mainBuss-show-add .product-img{
-    display: inline-block;
-    width: 165px;
-    height: 125px;
-    background:url("company/image/honerBg.jpg") no-repeat center;
-    cursor: pointer;
-}
-.mainBuss-show-add  .add-btns{
-    width:210px;
-    margin: 0 auto;
-}
-/*
-公司介绍
-*/
-.panel_title{
+
+.canal-city-container .canal-city-main-list {
     height: 45px;
     line-height: 45px;
-    padding: 0 0 0 10px;
+    border-bottom: 1px solid #eee;
 }
-.panel_title>span{
-    font-size: 14px;
-    margin: 10px 0 0 10px;
+
+.canal-city-main .canal-city-main-list:last-child {
+    border: none;
 }
-.comp_ul>li{
-    margin-bottom: 10px;
-    width: 958px;
-}
-.comp_introduce{
-    width: 100%;
-    height: 35px;
-    line-height: 35px;
-    background-color: #dfdfdf;
-    font-weight: bold;
-    font-size: 14px;
-    padding-left: 15px;
-}
-.introduce_ico{
-    float: right;
-    margin-right: 15px;
-    cursor: pointer;
-}
-.comp_text1{
-    width: 100%;
-    padding: 15px 15px 20px 15px;
-}
-.comp_text2{
-    width: 100%;
-    height: 187px;
-    border: 1px solid rgba(0, 0, 0, 0.75);;
-    padding: 15px 15px 0 15px;
-}
-.comp_text2 .btns{
+
+.canal-city-main span> button {
+    height: 25px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: none;
+    color: #FFFFFF;
     margin-top: 10px;
-    width: 100%;
+}
+
+.canal-city-main span.city-main-middle {
     text-align: center;
 }
-.comp_text2 .btns button{
-    border-radius: 15px;
-    padding: 5px 25px;
-    margin: 0 10px;
+
+.canal-city-main-list span.city-main-middle {
+    line-height: 0px;
+}
+
+.canal-city-main span.city-main-last {
+    text-align: right;
+}
+
+.canal-city-main-list span> img {
+    width: 30px;
+    height: 24px;
+    margin-top: 10px;
+}
+
+/*城市轮播页面主页begin*/
+
+.canal-city-container .canal-cityName a {
+    float: right;
+    color: #0075cc;
+    font-size: 14px;
+    line-height: 44px;
+}
+
+.canal-city-container .carouseCity-main {
     background-color: #FFFFFF;
-    border: 1px solid #000000;
+    padding: 30px;
+    border-radius: 5px;
+    padding-bottom: 60px;
+}
+
+.canal-city-container .carouseCity-top {
+    height: 28px;
+    line-height: 28px;
+}
+
+.canal-city-container .carouseCity-top button {
+    width: 75px;
+    float: right;
+    color: #FFFFFF;
+    height: 28px;
+    border-radius: 25px;
+    background-color: #0075cc;
+    border: none;
+}
+
+.canal-city-container .carouseCity-list-top {
+    height: 35px;
+    line-height: 35px;
+    background-color: #eeeeee;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.canal-city-container span {
+    display: inline-block;
+}
+
+.canal-city-container span.carouseCity-first-theme {
+    width: 365px;
+}
+
+.canal-city-container span.carouseCity-second-theme {
+    width: 180px;
+    vertical-align: top;
+}
+
+.canal-city-container span.carouseCity-third-theme {
+    width: 100px;
+    vertical-align: top;
+}
+
+.canal-city-container span.carouseCity-fourth-theme {
+    width: 110px;
+    vertical-align: top;
+}
+
+.carouseCity-list span.carouseCity-first-theme {
+    height: 70px;
+    line-height: 70px;
+    vertical-align: top;
+}
+
+.carouseCity-list span.carouseCity-second-theme {
+    height: 70px;
+    line-height: 70px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.carouseCity-list span.carouseCity-third-theme {
+    line-height: 70px;
+}
+
+.carouse-img-box {
+    margin-right: 10px;
+    display: inline-block;
+    width: 100px;
+    height: 70px;
+    vertical-align: top;
+}
+
+.carouseCity-list .carouse-img-box img {
+    max-width: 100px;
+    max-height: 70px;
+}
+
+.canal-city-container span.carouseCity-list-main {
+    width: 240px;
+    height: 70px;
+    line-height: 70px;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.canal-city-container .carouseCity-list {
+    height: 100px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #CCCCCC;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carouseCity-list .carouseCity-fourth-theme button:first-child {
+    background-color: #4f9fdc;
+    width: 65px;
+    height: 26px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: none;
+    margin-bottom: 10px;
+    outline: none;
+    margin-top: 12px;
+}
+
+
+/*城市轮播页面end*/
+
+
+/*添加轮播图片*/
+
+.carouseCity-main .addCarouseCity-list-table {
+    width: 630px;
+    margin: 0 auto;
+}
+
+.carouseCity-main .addCarouseCity-list-table td:first-child {
+    width: 130px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.carouseCity-main .addCarouseCity-list-table td {
+    height: 70px;
+}
+
+.carouseCity-main .addCarouseCity-list-table td em {
+    color: #e64348;
+}
+
+.carouseCity-main .addCarouseCity-list-table td:last-child {
+    width: 500px;
+}
+
+.carouseCity-main .addCarouseCity-list-table td:last-child .file {
+    width: 125px;
+    height: 50px;
+    background: url("../../../../image/thinkTank/check.jpg") no-repeat center;
+    display: inline-block;
+}
+
+.carouseCity-main .addCarouseCity-list-table input[type='file'] {
+    width: 100px;
+    height: 40px;
+    filter: alpha(opacity: 0);
+    opacity: 0;
+}
+
+.carouseCity-main .addCarouseCity-list-table .file_info {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.carouseCity-main .addCarouseCity-list-table td input[type='text'] {
+    width: 460px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    height: 40px;
+    text-indent: 10px;
+}
+
+.carouseCity-main .addCarouseCity-list-table td textarea {
+    width: 460px;
+    height: 250px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+}
+
+.carouseCity-main .addCarouseCity-list-table button.save_data {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0075cc;
+    color: #FFFFFF;
+}
+
+.carouseCity-main .addCarouseCity-list-table button.isLegal {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #666666;
+    color: #FFFFFF;
+}
+
+
+/*园区宣传的部分样式,主体样式来自运河城市管理*/
+
+.canal-city-container .carouseCity-top span.navBox> a {
+    display: inline-block;
+    width: 60px;
+    margin-right: 25px;
+    color: #000;
+    text-align: center;
+}
+
+.canal-city-container .carouseCity-top span.navBox> a.active {
+    border-bottom: 2px solid #0075cc;
+}
+
+.canal-city-container>.carouseCity-main>.gm_middle_table {
+    width: 100%;
+}
+
+
+/*标杆企业*/
+
+.canal-city-container .bestCompany-first-theme {
+    width: 400px;
+}
+
+/*.canal-city-container .bestCompany-second-theme {
+	width: 150px;
+}
+
+.canal-city-container .bestCompany-third-theme {
+	width: 100px;
+}*/
+
+.canal-city-container .bestCompany-fourth-theme {
+    width: 180px;
+}
+
+.canal-city-container .bestCompany-fifth-theme {
+    width: 170px;
+}
+
+.canal-city-container .bestCompany-table{
+    width:100%;
+}
+
+.canal-city-container .bestCompany-table tr td {
+    border-top: none;
+}
+
+
+/*list部分的样式*/
+
+.canal-city-container .bestCompany-list {
+    height: 80px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #CCCCCC;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bestCompany-list .bestCompany-second-theme {
+    height: 70px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.canal-city-container .bestCompany-imgBox {
+    display: inline-block;
+    width: 90px;
+    height: 70px;
+    vertical-align: top;
+}
+
+.bestCompany-list .bestCompany-first-theme img {
+    display: inline-block;
+    max-width: 90px;
+    max-height: 50px;
+    vertical-align: middle;
+}
+
+.bestCompany-list .bestCompany-first-theme span.carouseCity-list-main {
+    width: 270px;
+    display: inline-block;
+    height: 70px;
+}
+
+.bestCompany-list .bestCompany-fifth-theme .con_del_btn {
+    margin-top: 10px;
+}
+
+.bestCompany-list span.bestCompany-first-theme,
+.bestCompany-list span.bestCompany-second-theme,
+.bestCompany-list span.bestCompany-third-theme,
+.bestCompany-list span.bestCompany-fourth-theme {
+    vertical-align: top;
+    line-height: 70px;
+    margin-left: 3px;
+}
+
+
+/*新增标杆企业样式*/
+
+.canal-city-container .companySearchBox {
+    padding: 25px 20px;
+    background-color: #FFFFFF;
+}
+
+.canal-city-container .companySearchBox input {
+    width: 240px;
+    height: 30px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.canal-city-container .companySearchBox select {
+    width: 150px;
+    height: 30px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding-left: 10px;
     outline: none;
 }
-.comp_text2 .btns button:hover{
-    background-color: rgba(0, 0, 0, 0.75);;
+
+.canal-city-container .companySearchBox select option {
+    width: 150px;
+}
+
+.canal-city-container .companySearchBox button {
+    width: 90px;
+    height: 30px;
+    background-color: #0075cc;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin: 15px 0 0 70px;
+}
+
+
+/*添加标杆企业样式*/
+
+.addBestCompany-main {
+    margin-top: 25px;
+}
+
+.addBestCompany-main .addBestCompany-list-top {
+    margin: 0px;
+}
+
+.addBestCompany-main span {
+    display: inline-block;
+    text-align: center;
+}
+
+.addBestCompany-main .addBestCompany-first-theme {
+    width: 330px;
+}
+
+.addBestCompany-main .addBestCompany-second-theme {
+    width: 180px;
+}
+
+.addBestCompany-main .addBestCompany-third-theme {
+    width: 140px;
+}
+
+.addBestCompany-main .addBestCompany-fourth-theme {
+    width: 110px;
+}
+
+.addBestCompany-main .addBestCompany-list {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.addBestCompany-main .addBestCompany-first-theme img {
+    display: inline-block;
+    max-width: 105px;
+    max-height: 70px;
+    margin-right: 15px;
+    vertical-align: top;
+}
+
+.addBestCompany-first-theme span.carouseCity-list-main {
+    width: 200px;
+}
+
+.addBestCompany-main .addBestCompany-list {
+    height: 80px;
+    padding: 5px 0;
+}
+
+.addBestCompany-list .addBestCompany-first-theme {
+    line-height: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.addBestCompany-list .addBestCompany-second-theme,
+.addBestCompany-list .addBestCompany-first-theme,
+.addBestCompany-list .addBestCompany-third-theme,
+.addBestCompany-list .addBestCompany-fourth-theme {
+    line-height: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.addBestCompany-list .addBestCompany-fourth-theme button {
+    /*margin-top: 25px;*/
+    color: #0075cc;
+    border: none;
+    background-color: transparent;
+}
+
+.addBestCompany-list .addBestCompany-fourth-theme .btn-disabled {
+    color: #CCCCCC;
+}
+
+.addBestCompany-first-theme .company_img_box {
+    display: inline-block;
+    width: 105px;
+    height: 70px;
+    vertical-align: top;
+}
+
+
+/*---城轨主界面样式----*/
+
+
+/*提高优先级覆盖运河样式的宽度*/
+
+div.urbanRail-container {
+    width: 978px;
+    margin: 40px auto 40px auto;
+}
+
+div.urbanRail-container button {
+    outline: none;
+}
+
+
+/*城市轮播图管理首页*/
+
+div.urbanRail-container span.carouseCity-first-theme {
+    width: 400px;
+}
+
+div.urbanRail-container span.carouseCity-second-theme {
+    width: 200px;
+    vertical-align: top;
+}
+
+div.urbanRail-container span.carouseCity-third-theme {
+    width: 140px;
+    vertical-align: top;
+}
+
+div.urbanRail-container span.carouseCity-fourth-theme {
+    width: 120px;
+}
+
+
+/*一带一路的样式*/
+
+
+/*一带一路左侧栏样式*/
+
+div.obor-leftBar dl dd.accordion-obor {
+    height: auto;
+    padding: 0;
+}
+
+div.obor-leftBar .accordion-obor .accordion-obor-heading {
+    padding: 0 0 0 25px;
+    background-color: #4f9fdc;
+    font-size: 16px;
+}
+
+div.obor-leftBar .accordion-obor-heading .accordion-obor-header {
+    overflow: hidden;
+}
+
+div.obor-leftBar .accordion-obor .accordion-obor-heading button.addList {
+    float: right;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+div.obor-leftBar .accordion-obor .accordion-obor-heading a {
+    color: #FFFFFF;
+}
+
+div.obor-leftBar .accordion-obor .accordion-obor-inner {
+    background-color: #4f9fdc;
+    color: #FFFFFF;
+    height: 35px;
+    padding: 0 0 0 45px;
+}
+
+div.obor-leftBar .accordion-obor .accordion-obor-inner:hover {
+    background-color: #0075cc;
+}
+
+
+/*一带一路招商引资列表样式*/
+
+.attract-invest-container .search-info-box {
+    padding: 25px 20px;
+    background-color: #FFFFFF;
+}
+
+.canal-city-container ._top_add_btn {
+    float: right;
+    margin-left: 10px;
+    border: none;
+    background-color: #0075cc;
+    width: 80px;
+    color: #FFFFFF;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.attract-invest-container .search-info-box .input-group-addon {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    line-height: 10px;
+    background-color: transparent;
+    margin-left: -8px;
+    margin-top: -2px;
+}
+
+.attract-invest-container .search-info-box .input-group,
+.attract-invest-container .form-group {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.attract-invest-container .form-group {
+    margin-left: 15px;
+}
+
+.attract-invest-container .search-info-box input,
+.attract-invest-container .search-info-box select {
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    outline: none;
+}
+
+.attract-invest-container .search-info-box input.att_in_topic {
+    width: 310px;
+}
+
+.attract-invest-container .search-info-box input.att_in_date {
+    width: 100px;
+    border-right: none;
+}
+
+.attract-invest-container .search-info-box select.att_in_type {
+    width: 310px;
+}
+
+.attract-invest-container .search-info-box .search-info-type {
+    margin: 15px 0;
+}
+
+.attract-invest-container .search-info-box button {
+    margin-left: 75px;
+    border: none;
+    background-color: #0075cc;
+    width: 80px;
+    color: #FFFFFF;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.attract-invest-container .attract-invest-list {
+    padding: 25px 20px;
+    background-color: #FFFFFF;
+    margin-top: 30px;
+}
+
+.attract-invest-container .attract-investList-top span {
+    display: inline-block;
+    text-align: center;
+}
+
+.attract-invest-container .attract-investList-info {
+    width: 40%;
+}
+
+.attract-invest-container .attract-investList-type {
+    width: 29%;
+}
+
+.attract-invest-container .attract-investList-op {
+    width: 29%;
+}
+
+.attract-invest-container .attract-investList-top {
+    background-color: #eeeeee;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.attract-invest-container table {
+    width: 100%;
+}
+
+.attract-invest-container table .attract-investList-mainCon {
+    margin-bottom: 20px;
+    border: 1px solid #e9f4fa;
+}
+
+.attract-invest-container .attract-investList-header {
+    background-color: #e9f4fa;
+    padding-left: 18px;
+}
+
+.attract-investList-header .del_img {
+    float: right;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.attract-invest-container .attract-investList-header span:first-child {
+    padding-right: 20px;
+}
+
+.attract-invest-container span.attract-investList-id {
+    color: #0075cc;
+}
+
+.attract-invest-container .attract-investList-main span {
+    text-align: center;
+    vertical-align: top;
+    height: 100px;
+    border-right: 1px solid #e9f4fa;
+    padding: 20px 18px;
+}
+
+.attract-invest-container .attract-investList-main span.attract-investList-info {
+    text-align: left;
+}
+
+.attract-invest-container .attract-investList-main span.attract-investList-op {
+    border-right: none;
+}
+
+.attract-invest-container span.attract-investList-op button {
+    background-color: #0075CC;
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
     color: #FFFFFF;
     border: none;
 }
-/**
-企业荣誉
-*/
-.panel_title>label{
-    float: right;
+
+
+/*产业介绍列表页图片*/
+
+.attract-investList-mainCon ._industryListImg {
+    display: inline-block;
+    width: 100px;
+    height: 70px;
     margin-right: 10px;
 }
-.honer_images>ul{
-    overflow: hidden;
-    width: 100%;
+
+.attract-investList-mainCon ._industryListImg img {
+    max-width: 100px;
+    max-height: 70px;
 }
-.honer_images>ul>li{
-    float: left;
-    margin-left: 12px;
-    margin-bottom: 20px;
-    width: 225px;
-    height: 175px;
-    background-color:  #DDDDDD;
+
+.attract-investList-mainCon .attract-investList-info ._industryListInfo {
+    width: 150px;
+    height: 70px;
+    display: inline-block;
+    overflow: hidden;
+    border: none;
+    vertical-align: top;
+}
+
+
+/*全球化案例*/
+
+div.caseProject-container {
+    width: 1040px;
+}
+
+div.caseProject-container .search-info-top input.att_in_topic {
+    margin-right: 23px;
+}
+
+div.caseProject-container .caseProject_type {
+    width: 100px;
+    margin-right: 23px;
+}
+
+div.caseProject-list .attract-investList-info {
+    width: 60%;
+}
+
+div.caseProject-list .attract-investList-type {
+    width: 19%;
+}
+
+div.caseProject-list .attract-investList-op {
+    width: 19%;
+}
+
+.carouseCity-main .editCPro {
+    width: 495px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.warning {
+    border: 1px solid #ff3c3c;
+}
+
+.upAPicture {
+    display: inline-block;
+    width: 460px;
+    height: 185px;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 10px;
+}
+
+.noPicture {
+    width: 461px;
+    height: 186px;
     text-align: center;
 }
-.honer_images>ul>li>div:first-child{
-    height: 140px;
-    margin-left: -5px;
+
+.inputTypeUrl {
+    width: 460px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    height: 40px;
+    text-indent: 10px;
 }
-.honer_images>ul>li>div:first-child img{
-    display: block;
-    width: 225px;
-    height: 140px;
+
+.warningBorder {
+    width: 462px;
+    height: 42px;
+    border-radius: 5px;
 }
-.honer_images>ul>li>div:last-child{
-    background-color: #FFFFFF;
-    display: inline-block;
-    width: 225px;
-    height: 35px;
-    line-height: 35px;
-    border: 1px solid #DDDDDD;
-    margin-left: -5px;
+
+.wauningTextAreaBorder {
+    width: 462px;
+    height: 253px;
+    border-radius: 5px;
 }
-.honer_filePush{
-    background: url("company/image/honerBg.jpg");
+
+.warningUmeditorBorder{
+    width: 462px;
+    height: 380px;
+    border-radius: 5px;
 }
-.honer_filePush input{
-    width: 220px;
-    height: 140px;
-    opacity: 0;
+
+.warningUmeditorBorder-canal{
+    width: 474px;
+    height: 385px;
+    border-radius: 5px;
 }
-.honer_filePush>div:last-child{
-    border:none;
+
+.alert-info {
+    position: absolute;
+    padding: 10px;
+    background: #fff4d7;
+    margin-top: 30px;
+    left: 360px;
+    width: 210px;
+    text-align: left;
 }
-.card_detail table td{
-    padding: 5px 5px;
+
+.alert-info i {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff4d7;
+    margin: -20px 68px auto;
+}
+
+.addBestCompany-second-theme .alert-msg {
+    left: 600px;
+    margin-top: 58px;
+    line-height: 20px;
+    text-align: left;
+}
+.addExhibition-container{
+    overflow: hidden;
+}
+.addExhibition-container-leftBox,.addExhibition-container-rightBox{
+    float: left;
+    width: 500px;
+
+}
+.addExhibition-container-leftBox h5,.addExhibition-container-rightBox h5{
+    color: #0075cc;
+}
+.addExhibition-container-rightBox{
+    margin-left: 50px;
+}
+._main-delBtn{
+    background-color: #666666;
+    color: #FFFFFF;
+    width: 68px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    float: right;
+    font-size: 14px;
+}
+.con_del_btn{
+    background-color: #666666;
+    width: 65px;
+    height: 26px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: none;
 }

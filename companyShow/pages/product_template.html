@@ -1,0 +1,50 @@
+<style>
+    .product-template {
+        width: 980px;
+        height: 420px;
+        padding: 20px;
+    }
+    .product-template .product-template-left {
+        width: 360px;
+        height: 360px;
+        float: left;
+        border-color:transparent;
+    }
+    .product-template .product-template-left img {
+        display: block;
+        width: 360px;
+        height: 360px;
+        border-color:transparent;
+    }
+    .product-template .product-template-right {
+        width: 560px;
+        height: 360px;
+        float: left;
+        padding-left: 30px;
+    }
+    .product-template .product-template-right p{
+        padding-top:30px;
+        height: 300px;
+    }
+    .product-template .product-template-right button{
+        width: 80px;
+        height: 35px;
+        background:none;
+        background-color:#0075cc;
+        border-radius:5px;
+        color:#fff;
+        outline:none;
+        border:none;
+        font-size: 14px;
+    }
+</style>
+<div class="product-template">
+    <div class="product-template-left">
+        <img ng-src = "{{productDetail.service_img_url}}" alt="">
+    </div>
+    <div class="product-template-right">
+        <h3>{{productDetail.service_name}}</h3>
+        <p>{{productDetail.service_desc}}</p>
+        <button ng-click="sendMail()">咨询</button>
+    </div>
+</div>

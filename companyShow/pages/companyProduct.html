@@ -1,0 +1,51 @@
+<style>
+    .product-template {
+        width: 1000px;
+        height: 440px;
+    }
+    .product-template .product-template-left {
+        width: 360px;
+        height: 360px;
+        float: left;
+    }
+    .product-template .product-template-left img {
+        display: block;
+        width: 360px;
+        height: 360px;
+    }
+    .product-template .product-template-right {
+        width: 560px;
+        height: 360px;
+        float: left;
+    }
+</style>
+<div class="line-four" ng-app="app-companyActive">
+    <div class="container">
+        <div class="title">{{companyInfo.name}}的所有产品</div>
+        <ul class="cons list-inline" style="padding-bottom: 30px; min-height: 200px;">
+            <li class="cons_li" ng-repeat="product in products" ng-click="showDetail(product)">
+                <a href="javascript:;">
+                    <div class="img">
+                        <img data-ui-lazyload={{product.service_img_url}} style="width: 198px;height: 198px;">
+                    </div>
+                    <div class="text" style="text-align: left;">
+                        <span>{{product.service_desc}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="title">{{companyInfo.name}}的所有服务</div>
+        <ul class="cons list-inline" style="padding-bottom: 30px; min-height: 200px;">
+            <li class="cons_li" ng-repeat="service in services" ng-click="showDetail(service)">
+                <a href="javascript:;">
+                    <div class="img">
+                        <img data-ui-lazyload={{service.service_img_url}} style="width: 198px;height: 198px;">
+                    </div>
+                    <div class="text" style="text-align: left;">
+                        <span>{{service.service_desc}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
