@@ -322,7 +322,7 @@ App.config(function($stateProvider, $urlRouterProvider) {
         //公司列表页
         .state("homePage.companySearch", {
             cache:false,
-            url: '/companySearch',
+            url: '/companySearch?searchType',
             views:{
                 'mainBody@homePage':{
                     templateUrl:'list/pages/companys.html',
