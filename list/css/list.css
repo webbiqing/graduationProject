@@ -1,0 +1,58 @@
+.searchBoxContainer{
+    width: 1280px;
+    margin:30px auto;
+}
+.searchBoxContainer .searchList span.searchLabels{
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 25px;
+    background-color: #ddb321;
+    color: #FFFFFF;
+}
+.searchBoxContainer .searchBox{
+    padding:20px 0;
+    border: 1px dashed #ddb321;
+}
+.searchBoxContainer .searchBox h4{
+    width: 90px;
+    margin-left: 10px;
+    border-bottom: 2px solid ;
+    padding-bottom: 5px;
+}
+.searchBoxContainer .searchList span.searchLabel{
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 25px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #FFFFFF;
+}
+.searchBoxContainer .searchList{
+    margin: 10px 0;
+}
+.searchBoxContainer .searchList span.searchLabel:hover{
+    background-color: #ddb321;
+    cursor: pointer;
+}
+.searchBoxContainer .searchResult{
+    width: 100%;
+}
+.searchBoxContainer .searchResult td{
+    padding: 10px 25px;
+}
+.searchBoxContainer .searchResult .companyDetails{
+    background-color: #ddb321;
+}
+.searchBoxContainer .companyDetails .companyImg{
+    width: 270px;
+    height:200px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.searchBoxContainer .companyDetails .companyImg:hover{
+    cursor: pointer;
+}
+.searchBoxContainer .companyDetails img{
+    display: inline-block;
+    max-width: 270px;
+    max-height: 250px;
+}

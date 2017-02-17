@@ -1,8 +1,6 @@
 .companyShowContainer{
     width: 1280px;
-    margin: auto;
-    position: relative;
-    top: 130px;
+    margin:30px auto;
 }
 #myCarousel{
     height:364px;

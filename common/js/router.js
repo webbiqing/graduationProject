@@ -318,5 +318,23 @@ App.config(function($stateProvider, $urlRouterProvider) {
                 }]
             }
         })
+        /*--------产品以及公司列表页--------*/
+        //公司列表页
+        .state("homePage.companySearch", {
+            cache:false,
+            url: '/companySearch',
+            views:{
+                'mainBody@homePage':{
+                    templateUrl:'list/pages/companys.html',
+                    controller:'companysCtr'
+                }
+            },
+            resolve:{
+                deps:["$ocLazyLoad",function($ocLazyLoad){
+                    return $ocLazyLoad.load(['list/css/list.css','list/js/companysCtr.js']);
+                }]
+            }
+        })
+
 });
 
