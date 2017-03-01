@@ -7,6 +7,10 @@
     color: #ffffff;
     z-index: 100;
 }
+.topBarContainer a{
+    color: #ffffff;
+    text-decoration: none;
+}
 .topBarContainer .centerBox{
     width: 1280px;
     height:100px;
@@ -40,6 +44,9 @@
     left: 0;
     opacity: 1;
     width: 100%;
+}
+.topBar-ul li a.on{
+    color: #ddb321;
 }
 .topBar-ul li a:after {
     content: "";

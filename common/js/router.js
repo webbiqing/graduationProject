@@ -4,17 +4,32 @@
 App.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/homePage');
     $stateProvider
+        /*登录模块的路由*/
         .state("login",{
             cache: false,
             url : "/login",
-            templateUrl : "logReg/login/pages/login.html",
+            templateUrl : "logReg/login/login.html",
             controller : "loginCtr",
             resolve:{
                 deps:["$ocLazyLoad",function($ocLazyLoad){
-                    return $ocLazyLoad.load(["logReg/login/js/loginCtr.js"]);
+                    return $ocLazyLoad.load(["logReg/login/js/loginCtr.js","logReg/login/css/login.css"]);
                 }]
             }
         })
+        /*注册模块的路由*/
+        .state("register",{
+            cache: false,
+            url : "/register",
+            templateUrl : "logReg/register/register.html",
+            controller : "registerCtr",
+            resolve:{
+                deps:["$ocLazyLoad",function($ocLazyLoad){
+                    return $ocLazyLoad.load(["logReg/register/js/registerCtr.js","logReg/register/css/register.css"]);
+                }]
+            }
+        })
+
+        /*首页路由*/
         .state('homePage', {
             cache: false,
             url : "/homePage",

@@ -1,0 +1,325 @@
+
+.reg-msg {
+    position: absolute;
+    top: 16px;
+    left: 21px;
+    color: #666;
+}
+.mr-155 {
+    margin-right: -201px;
+    margin-bottom: 16px;
+}
+
+.register_content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 360px;
+}
+.content1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 410px;
+    margin-top:10%;
+    min-height: 680px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.labelStyle {
+    position: absolute;
+    left: 45px;
+    top: 115px;
+    font-size: 14px;
+    color: #929292;
+    z-index: 999;
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.inputActive {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.labelActive {
+    left: 45px;
+    top: 115px;
+    z-index: 999;
+    background: white;
+    border: 2px solid white;
+    color: rgb(237, 97, 90);
+    font-size: 10px;
+    -webkit-transform: translate(-10px, -23px);
+    -moz-transform: translate(-50px, -1px);
+    -ms-transform: translate(-50px, -1px);
+    -o-transform: translate(-50px, -1px);
+    transform: translate(-50px, -1px);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.btn_my {
+    width: 175px;
+    height: 46px;
+    background-color: #0075cc;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 26px;
+    color:#ffffff;
+}
+
+
+.btn_my1 {
+    width: 175px;
+    height: 46px;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 26px;
+    color:#0075CC;
+}
+
+.rgs-btn-left {
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+}
+
+.rgs-btn-right {
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    margin-left: -4px;
+}
+
+.selected {
+    background-color: #0075CC;
+    color:#FFFFFF;
+
+}
+
+.font_selected {
+    color: #DB4747;
+    font-weight: bold;
+}
+
+.register_btn {
+    width: 350px;
+    height: 46px;
+    border: 0px;
+    border-radius: 23px;
+    background-color: #0075CC;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-top: 22px;
+}
+
+.rg_eamil_btn {
+    width: 130px;
+    height: 50px;
+    border: 0px;
+    border-radius: 25px;
+    background-color: #0075CC;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.input1 {
+    width: 350px;
+    height: 54px;
+    border-radius: 27px;
+    border: 1px solid #DDDDDD;
+    padding-left: 20px;
+}
+
+.input2 {
+    width: 106px;
+    height: 54px;
+    border-radius: 27px;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 16px;
+}
+
+/*.textarea {
+    width: 350px;
+    height: 123px;
+    border: 1px solid #DDDDDD;
+    border-radius: 27px;
+    resize: none;
+    margin-bottom: 16px;
+    padding: 20px;
+}*/
+
+.go {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-color: #FFFFFF;
+    border: 0px;
+    padding: 0px;
+    border-radius: 32px;
+    margin-top:-240px;
+    margin-left:300px;
+}
+
+
+.go.back {
+    margin-left: -380px;
+}
+/*287 289*/
+
+.steps {
+    width: 350px;
+    height: 34px;
+    border: 0px;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 22px;
+}
+
+.item {
+    margin-left: 15px;
+    width: 100px;
+    font-size: 14px;
+    color: #999999;
+    float: left;
+    margin-top: 2px;
+}
+
+.item_selected {
+    border-bottom: 1px solid red;
+}
+
+.yuan {
+    width: 20px;
+    height: 20px;
+    background-color: #9A9A9A;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.yuan_selected {
+    background-color: #D84646;
+}
+/*a  upload */
+
+.a-upload {
+    position: relative;
+    width: 350px;
+    height: 54px;
+    margin-bottom: 16px;
+    background-color: #DDDDDD;
+    border: 1px solid #EEEEEE;
+    border-radius: 27px;
+    line-height: 54px;
+    font: 16px;
+    color: #999999;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    cursor: pointer;
+}
+
+.a-upload input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+.a-upload:hover {
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+
+.holder {
+    position: relative;
+    float: left;
+    width: 106px;
+    height: 54px;
+    line-height: 54px;
+    border-radius: 27px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #DDDDDD;
+    margin-bottom: 16px;
+}
+
+.position_select {
+    width: 96px;
+    margin-left: 15px;
+    border: 0px;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url(logReg/images/triangle_12×9.png) no-repeat scroll right center;
+    background-position: 58px 25px;
+    outline: none;
+}
+
+.position_select option {
+    width: 68px;
+}
+/*消除a标签虚线框*/
+
+a:focus {
+    outline: none;
+    -moz-outline: none;
+}
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+
+select::-ms-expand {
+    display: none;
+}
+.content1>span{
+    display:block;
+    margin-bottom:15px;
+}
+.content1>img{
+    display:block;
+    text-align: center;
+    padding-left:40%;
+    margin-bottom:15px;
+}
+
+
+.invoke_top{
+    position: relative;
+    height: 100px;
+    line-height: 100px;
+    background-color: #0075cc;
+}
+.invoke_top a{
+    position: absolute;
+    right: 50px;
+    bottom: 0px;
+    text-decoration: none;
+}
+.invoke_top_img{
+    width: 223px;
+    height: 47px;
+    margin: auto;
+}
+.modal-footer>button {
+    height: 35px;
+    width: 70px;
+    text-align: center;
+}

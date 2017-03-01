@@ -6,9 +6,9 @@
         </div>
         <nav>
             <ul class="fl clearF topBar-ul f16">
-                <li class="fl" ><a ui-sref="homePage.companySearch({searchType:1})">参展公司</a></li>
-                <li class="fl"><a ui-sref="homePage.companySearch({searchType:2})">参展产品</a></li>
-                <li class="fl"><a ui-sref="homePage.companyShow">关于我们</a></li>
+                <li class="fl"><a ng-class="{'on':searchType==1}" ui-sref="homePage.companySearch({searchType:1})">参展公司</a></li>
+                <li class="fl"><a ng-class="{'on':searchType==2}" ui-sref="homePage.companySearch({searchType:2})">参展产品</a></li>
+                <li class="fl"><a ng-class="{'on':searchType==3}" ui-sref="homePage.companyShow">关于我们</a></li>
             </ul>
         </nav>
         <div class="row searchBox fl">
@@ -19,15 +19,15 @@
                 <input type="text" class="form-control" placeholder="站内搜索">
             </div>
         </div>
-        <!--<div class="logRegBox fl">
-            <span>登录</span>
+        <div class="logRegBox fl" ng-if="!showRegLogin">
+            <span><a ui-sref="login">登录</a></span>
             <span>|</span>
             <span>注册</span>
-        </div>-->
-        <div class="loginBox fl">
+        </div>
+        <div class="loginBox fl" ng-if="showRegLogin">
             <div class="dropdown">
                 <div class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="userName">wbq</span>
+                    <span class="userName">{{userName}}</span>
                     <span class="caret"></span>
                 </div>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -35,18 +35,15 @@
                     <li><a href="#">展会管理</a></li>
                     <li><a href="#">个人信息</a></li>
                     <li><a href="#">修改密码</a></li>
-                    <li><a href="#">我的收藏</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="#">退出登录</a></li>
+                    <li><a ui-sref="login">退出登录</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 <div ui-view="mainBody" class="mainBody"></div>
-<!--
-<section class="footBarContainer">
+<!--<section class="footBarContainer">
     <div class="focusC">关注我们</div>
     <div class="rightC">权限证书</div>
-</section>
--->
+</section>-->

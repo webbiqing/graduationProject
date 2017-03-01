@@ -1,0 +1,77 @@
+
+<div class="invoke_top">
+    <div class="invoke_top_img">
+        <img src="logReg/images/logo3.png" ui-sref="homepage" />
+    </div>
+    <a ui-sref="login" style="color: white;">
+        <span>已有账号去登录</span>
+        &nbsp;&nbsp;
+        <img src="logReg/images/go.png" />
+    </a>
+</div>
+
+<div class="register_content">
+
+    <button class="btn_my1 rgs-btn-left {{register_type=='2'?'selected':''}}" ng-click="register_type='2'">
+        <span>企业用户</span>
+    </button>
+    <button class="btn_my1 rgs-btn-right {{register_type=='3'?'selected':''}}" ng-click="register_type='3'">
+        <span>个人用户</span>
+    </button>
+
+    <form name="regform" class="person1" novalidate >
+
+        <div class="relative mr-155">
+            <span class="reg-msg">用户名</span>
+            <input name="username" type="text" class="input1" ng-model="userInfo.user_name" required/>
+        </div>
+
+        <div class="relative mr-155">
+            <span class="reg-msg">密码</span>
+            <input type="password" class="input1" ng-model="userInfo.password" name="pwd1" required/>
+        </div>
+
+        <div class="relative mr-155">
+            <span class="reg-msg">确认密码</span>
+            <input type="password" name="pwd2" class="input1" ng-model="confirm_password" required/>
+        </div>
+        <div>
+            <span>点击注册，即同意我们的</span>
+            <a href="#" data-toggle="modal" data-target="#myModal">服务声明</a>
+        </div>
+        <button type="submit" class="btn_my register_btn" ng-click="user_register()">
+            立即注册
+        </button>
+
+    </form>
+
+
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    毕业
+                </h4>
+            </div>
+            <div class="modal-body" style="font-size: 22px;font-weight: bold">
+                <p>1.毕业的时候不能带走学校的公共财产！</p>
+                <p>2.兄弟，你要毕业了！除了学妹，你什么带不走！</p>
+                <p>3.大妹子，你要毕业了！没有帅气的欧巴给你带走的话，就老老实实做我们的女神吧！</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    我同意
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
