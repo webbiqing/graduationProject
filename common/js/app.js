@@ -7,7 +7,16 @@ angular.element(document).ready(function(){
     angular.bootstrap(document,['myApp']);
 });
 
-var App = angular.module('myApp', ['ui.router', 'ngResource', 'ngDialog', 'oc.lazyLoad', 'chieffancypants.loadingBar','ksSwiper']);
+var App = angular.module('myApp',
+    [
+        'ui.router',
+        'ngResource',
+        'ngDialog',
+        'oc.lazyLoad',
+        'chieffancypants.loadingBar',
+        'ksSwiper',
+        'serviceModule'
+    ]);
 
 //配置头部缓冲进度条
 App.config(function(cfpLoadingBarProvider) {

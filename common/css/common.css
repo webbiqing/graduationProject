@@ -94,6 +94,7 @@ input,button,textarea,select{
     url('//at.alicdn.com/t/font_1f2xfue626dbcsor.ttf') format('truetype'),
     url('//at.alicdn.com/t/font_1f2xfue626dbcsor.svg#iconfont') format('svg');
 }
+
 .iconfont{
     font-family:"iconfont" !important;
     font-size:16px;
