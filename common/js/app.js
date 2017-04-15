@@ -15,7 +15,8 @@ var App = angular.module('myApp',
         'oc.lazyLoad',
         'chieffancypants.loadingBar',
         'ksSwiper',
-        'serviceModule'
+        'serviceModule',
+        'ngTable'
     ]);
 
 //配置头部缓冲进度条

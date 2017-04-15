@@ -932,3 +932,15 @@ div.caseProject-list .attract-investList-op {
     color: #FFFFFF;
     border: none;
 }
+.file_upload_wrap{
+    position: relative;
+    background-color: #f6f6f6;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.file_upload_wrap input{
+    position: absolute;
+    top:0;
+    left: 0;
+    cursor: pointer;
+}

@@ -1,8 +1,8 @@
 /**
  * 企业展示路由
  */
-/*企业展示:标准展1*/
-App.controller('companyShowInfoCtr', function($rootScope, $scope, $state,$resource, $filter,ngDialog,$timeout) {
+App.controller('companyShowInfoCtr', function($rootScope, $scope, $stateParams,$resource, $filter,ngDialog,$timeout,cmsImageUpload) {
+
 
 });
 

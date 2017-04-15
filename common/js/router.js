@@ -124,7 +124,7 @@ App.config(function($stateProvider, $urlRouterProvider) {
         /*添加企业轮播图*/
         .state('homePage.backStage.addCarousel',{
             cache: false,
-            url : "/addCarousel",
+            url : "/addCarousel?pavilion_num&carouseId",
             views:{
                 'rightDetails@homePage.backStage': {
                     templateUrl: 'backStageManage/companyShowManage/pages/addCarousel.html',
@@ -158,7 +158,7 @@ App.config(function($stateProvider, $urlRouterProvider) {
         /*添加主营产品*/
         .state('homePage.backStage.addProduct',{
             cache: false,
-            url : "/addProduct",
+            url : "/addProduct?pavilion_num&productId",
             views:{
                 'rightDetails@homePage.backStage': {
                     templateUrl: 'backStageManage/companyShowManage/pages/addProduct.html',
@@ -226,7 +226,7 @@ App.config(function($stateProvider, $urlRouterProvider) {
         /*活动与资讯管理添加*/
         .state('homePage.backStage.addActivityNews',{
             cache: false,
-            url : "/addActivityNews",
+            url : "/addActivityNews?articleId",
             views:{
                 'rightDetails@homePage.backStage': {
                     templateUrl: 'backStageManage/activityNews/pages/addActivityNews.html',
@@ -270,11 +270,10 @@ App.config(function($stateProvider, $urlRouterProvider) {
                 }]
             }
         })
-        //企业展示2公司介绍
         .state("homePage.companyShow.companyShowIntroduce", {
             url: '/companyShowIntroduce',
             views:{
-                'companyInfo@homepage.companyShow':{
+                'companyInfo@homePage.companyShow':{
                     templateUrl:'companyShow/pages/companyShowIntroduce.html',
                     controller:'companyShowIntroduceCtr'
                 }
@@ -286,11 +285,10 @@ App.config(function($stateProvider, $urlRouterProvider) {
                 }]
             }
         })
-        //企业展示2公司动态
         .state("homePage.companyShow.companyDynamic", {
             url: '/companyDynamic',
             views:{
-                'companyInfo@homepage.companyShow':{
+                'companyInfo@homePage.companyShow':{
                     templateUrl:'companyShow/pages/companyDynamic.html',
                     controller:'companyShowDynamicCtr'
                 }
@@ -302,11 +300,10 @@ App.config(function($stateProvider, $urlRouterProvider) {
                 }]
             }
         })
-        //企业展示2产品／服务
         .state("homePage.companyShow.companyProduct", {
             url: '/companyProduct',
             views:{
-                'companyInfo@homepage.companyShow':{
+                'companyInfo@homePage.companyShow':{
                     templateUrl:'companyShow/pages/companyProduct.html',
                     controller:'companyProductCtr'
                 }
@@ -318,11 +315,10 @@ App.config(function($stateProvider, $urlRouterProvider) {
                 }]
             }
         })
-        //企业展示2动态详情
         .state("homePage.companyShow.companyDynamicDetail", {
             url: '/companyDynamicDetail',
             views:{
-                'companyInfo@homepage.companyShow':{
+                'companyInfo@homePage.companyShow':{
                     templateUrl:'companyShow/pages/companyDynamicDetail.html',
                     controller:'companyShowDynamicDetailCtr'
                 }

@@ -31,9 +31,9 @@
     <div class="companyShow-nav">
         <ul>
             <li><a ui-sref="homePage.companyShow.companyShowIndex" ng-class="{'navItemChecked':navItemIndex == 1}" ng-click="navItemIndex = 1">公司主页</a></li>
-            <li><a ui-sref="homePage.companyShow.companyDynamic" ng-class="{'navItemChecked':navItemIndex == 2}" ng-click="navItemIndex = 2">公司介绍</a></li>
+            <li><a ui-sref="homePage.companyShow.companyShowIntroduce" ng-class="{'navItemChecked':navItemIndex == 2}" ng-click="navItemIndex = 2">公司介绍</a></li>
             <li><a ui-sref="homePage.companyShow.companyProduct" ng-class="{'navItemChecked':navItemIndex == 3}" ng-click="navItemIndex = 3">产品/服务</a></li>
-            <li><a ui-sref="homePage.companyShow.companyDynamicDetail" ng-class="{'navItemChecked':navItemIndex == 4}" ng-click="navItemIndex = 4">公司动态</a></li>
+            <li><a ui-sref="homePage.companyShow.companyDynamic" ng-class="{'navItemChecked':navItemIndex == 4}" ng-click="navItemIndex = 4">公司动态</a></li>
         </ul>
     </div>
     <div ui-view="companyInfo">

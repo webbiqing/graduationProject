@@ -12,7 +12,7 @@
                     <span>公司名称：</span>
                 </td>
                 <td>
-                    <input type="text"     >
+                    <input type="text" ng-model="companyData.name">
                 </td>
             </tr>
             <tr>
@@ -21,16 +21,24 @@
                     <span>公司地址：</span>
                 </td>
                 <td>
-                    <input type="text">
+                    <input type="text" ng-model="companyData.company_adress">
                 </td>
             </tr>
             <tr>
                 <td>
                     <em>*</em>
-                    <span>经营模式：</span>
+                    <span>经营模式:</span>
                 </td>
                 <td>
-                    <input type="text">
+                    <select name="companyData.business_model" ng-model="companyData.business_model">
+                        <option value="采掘">采掘</option>
+                        <option value="制造">制造</option>
+                        <option value="批发">批发</option>
+                        <option value="咨询">咨询</option>
+                        <option value="租赁">租赁</option>
+                        <option value="代理">代理</option>
+                        <option value="其他">其他</option>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -39,7 +47,13 @@
                     <span>经营范围：</span>
                 </td>
                 <td>
-                    <input type="text">
+                    <select name="companyData.business_scope" ng-model="companyData.business_scope">
+                        <option value="服务类">服务类</option>
+                        <option value="科技类">科技类</option>
+                        <option value="商贸类">商贸类</option>
+                        <option value="食品类">食品类</option>
+                        <option value="其他">其他</option>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -48,7 +62,7 @@
                     <span>公司网址：</span>
                 </td>
                 <td>
-                    <input type="text"    >
+                    <input type="text" ng-model="companyData.company_url">
                 </td>
             </tr>
             <tr>
@@ -57,7 +71,7 @@
                     <span>联系人：</span>
                 </td>
                 <td>
-                    <input type="text"    >
+                    <input type="text" ng-model="companyData.company_linkMan">
                 </td>
             </tr>
             <tr>
@@ -66,7 +80,7 @@
                     <span>联系人电话：</span>
                 </td>
                 <td>
-                    <input type="text"    >
+                    <input type="text" ng-model="companyData.company_tel">
                 </td>
             </tr>
             <tr>
@@ -75,7 +89,7 @@
                     <span>公司业绩：</span>
                 </td>
                 <td>
-                    <input type="text">
+                    <input type="text" ng-model="companyData.company_grade">
                 </td>
             </tr>
             <tr>
@@ -84,14 +98,13 @@
                     <span>公司简介：</span>
                 </td>
                 <td>
-                    <input type="text">
+                    <input type="text" ng-model="companyData.company_introduce">
                 </td>
             </tr>
             <tr>
                 <td></td>
                 <td>
-                    <button class="save_data">保存</button>
-                   <!-- <button class="save_data" ng-click="addInvestmentInfo(articaleData)" ng-if="!articaleData.id">添加</button>-->
+                    <button class="save_data" ng-click="updateCompanyInfo(companyData)">保存</button>
                 </td>
             </tr>
             </tbody>

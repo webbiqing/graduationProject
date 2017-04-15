@@ -6,7 +6,7 @@
     <div class="carouseCity-main">
         <div class="carouseCity-top">
             <span>企业轮播图管理（最多添加6条）</span>
-            <button ui-sref="homePage.backStage.addCarousel" ng-disabled="carouseCityList.length>=6" ng-class="{'gray_btn':carouseCityList.length>=6}">添加</button>
+            <button ui-sref="homePage.backStage.addCarousel({pavilion_num:pavilion_num})">添加</button>
         </div>
         <div class="carouseCity-list-top">
             <span class="carouseCity-first-theme">轮换信息</span>
@@ -14,21 +14,21 @@
             <span class="carouseCity-third-theme">排序</span>
             <span class="carouseCity-fourth-theme">操作</span>
         </div>
-        <div class="carouseCity-list">
+        <div class="carouseCity-list" ng-repeat="carousels in carouselData">
             <span class="carouseCity-first-theme">
                 <div class="carouse-img-box"><img ng-src="" alt=""></div>
-                <span class="carouseCity-list-main">sdfghsdfghdsfg</span>
+                <span class="carouseCity-list-main">{{carousels.title}}</span>
             </span>
             <a href="#" target="_blank">
-                <span class="carouseCity-second-theme" ></span>
+                <span class="carouseCity-second-theme">{{carousels.link}}</span>
             </a>
             <span class="carouseCity-third-theme">
                 <img src="backStageManage/companyShowManage/image/up.jpg" style="cursor: pointer;" >
                 <img src="backStageManage/companyShowManage/image/down.jpg" style="cursor: pointer;" >
             </span>
             <span class="carouseCity-fourth-theme">
-                <button ui-sref="backStageManage.canalManage.addCarouseCity({cityId:cityId,carouseId:carouseCity.id,cityName:cityName})">编辑</button>
-                <button class="con_del_btn" >删除</button>
+                <button ui-sref="homePage.backStage.addCarousel({pavilion_num:pavilion_num,carouseId:carousels.id})">编辑</button>
+                <button class="con_del_btn" ng-click="delCarousel(carousels.id)">删除</button>
             </span>
         </div>
     </div>
