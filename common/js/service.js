@@ -5,7 +5,7 @@ var serviceApp = angular.module('serviceModule',['ngResource']);
 
 serviceApp.service('cmsImageUpload', function ($q, $http,$resource) {
 
-    var base_url = 'http://10.211.54.221:9091/';
+    var base_url = 'http://localhost:9091/';
 
     //上传图片
     this.image_upload = function (image) {
@@ -13,7 +13,7 @@ serviceApp.service('cmsImageUpload', function ($q, $http,$resource) {
         paramData.append('cmsFile', image);
         return $http({
             method:'POST',
-            url:"http://10.211.54.221:9092/exhibition/file/imgfile",
+            url:"http://localhost:9092/exhibition/file/imgfile",
             data: paramData,
             headers: {'Content-Type':undefined},
             transformRequest: angular.identity
