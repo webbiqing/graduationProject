@@ -6,18 +6,18 @@
 </style>
 <div class="company_introduce">
     <div class="company_introduce_left">
-        <div class="company_introduce_logo ">
-            <img data-ui-lazyload="{{companyInfo.logoSrc}}" style="width: 150px;height: 80px;" />
+        <div class="company_introduce_logo" style="text-align: center">
+            <img src="homePage/images/logo1.jpg" style="max-width: 150px;max-height: 80px;display: inline-block;" />
         </div>
         <div class="company_introduce_msg">
             <ul>
-                <li title="{{companyInfo.name}}">公司名称：撒打发斯蒂芬</li>
-                <li title="{{companyInfo.address}}">公司地址：撒打发斯蒂芬</li>
-                <li title="{{companyInfo.mode}}">经营模式：撒打发斯蒂芬</li>
-                <li title="{{companyInfo.range}}">经营范围：撒打发斯蒂芬</li>
-                <li title="{{companyInfo.contact}}">联系人：撒打发斯蒂芬</li>
-                <li title="{{companyInfo.phone}}">联系电话：撒打发斯蒂芬</li>
-                <li title="{{companyInfo.web}}">公司网址：<a ng-href="{{companyInfo.web}}" target="_blank">{{companyInfo.web}}</a></li>
+                <li title="{{companyData.name}}">公司名称：{{companyData.name}}</li>
+                <li title="{{companyData.company_adress}}">公司地址：{{companyData.company_adress}}</li>
+                <li title="{{companyData.business_model}}">经营模式：{{companyData.business_model}}</li>
+                <li title="{{companyData.business_scope}}">经营范围：{{companyData.business_scope}}</li>
+                <li title="{{companyData.company_linkMan}}">联系人：{{companyData.company_linkMan}}</li>
+                <li title="{{companyData.company_tel}}">联系电话：{{companyData.company_tel}}</li>
+                <li title="{{companyData.company_url}}">公司网址：<a ng-href="{{companyData.company_url}}" target="_blank">{{companyData.company_url}}</a></li>
             </ul>
         </div>
         <!--<div class="company_introduce_icon">-->
@@ -39,9 +39,9 @@
     <div class="company_introduce_right">
         <div class="right_con">
             <p>公司简介</p>
-            <p>{{companyInfo.introduce}}</p>
+            <p>{{companyData.company_introduce}}</p>
             <p style="margin-top: 50px;">公司业绩</p>
-            <p>{{companyInfo.achievement}}</p>
+            <p>{{companyData.company_grade}}</p>
         </div>
     </div>
 </div>

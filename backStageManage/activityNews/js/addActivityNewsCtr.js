@@ -28,10 +28,11 @@ App.controller('addActivityNewsCtr', function($rootScope, $scope,$stateParams,$r
             'pavilion_num':'6256826112253366272',
             'title':gardenInfo.title,
             'author':gardenInfo.author,
-            "content":gardenInfo.content
+            "content":gardenInfo.content,
+            "category_id":Date.parse( new Date())
         };
         var param = '';
-
+        debugger;
         cmsImageUpload.Add('exhibition/articles',param,postData).then(function (data,header) {
             if(angular.isUndefined(data.error)) {
                 alert('添加成功！');

@@ -9,12 +9,11 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
         </ol>
         <!-- 轮播（Carousel）项目 -->
         <div class="carousel-inner">
-            <div class="item" ng-class="{'active' : $index ==0}" ng-repeat="bannerImg in bannerImgs">
-                <img style="width: 1280px;height: 340px;" data-ui-lazyload="{{bannerImg.image_url}}" >
+            <div class="item" ng-class="{'active' : $index ==0}" ng-repeat="carousels in carouselData">
+                <img style="width: 1280px;height: 530px;" ng-src="{{carousels.img_url |stringFilter}}" >
             </div>
         </div>
         <!-- Controls -->
@@ -32,7 +31,6 @@
         <ul>
             <li><a ui-sref="homePage.companyShow.companyShowIndex" ng-class="{'navItemChecked':navItemIndex == 1}" ng-click="navItemIndex = 1">公司主页</a></li>
             <li><a ui-sref="homePage.companyShow.companyShowIntroduce" ng-class="{'navItemChecked':navItemIndex == 2}" ng-click="navItemIndex = 2">公司介绍</a></li>
-            <li><a ui-sref="homePage.companyShow.companyProduct" ng-class="{'navItemChecked':navItemIndex == 3}" ng-click="navItemIndex = 3">产品/服务</a></li>
             <li><a ui-sref="homePage.companyShow.companyDynamic" ng-class="{'navItemChecked':navItemIndex == 4}" ng-click="navItemIndex = 4">公司动态</a></li>
         </ul>
     </div>

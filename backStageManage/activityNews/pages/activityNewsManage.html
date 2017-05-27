@@ -4,10 +4,10 @@
     </div>
     <div class="carouseCity-main">
         <div class="carouseCity-top">
-            <span class="navBox">
-                <a ng-class="{'active':publicityType==1}" ui-sref="backStageManage.canalManage.gardenManage({cityId:cityId,type:1})">活动</a>
-                <a ng-class="{'active':publicityType==2}" ui-sref="backStageManage.canalManage.gardenManage({cityId:cityId,type:2})">新闻</a>
-            </span>
+           <!-- <span class="navBox">
+                <a ng-class="{'active':publicityType==1}" ng-click="">活动</a>
+                <a ng-class="{'active':publicityType==2}" ng-click="">新闻</a>
+            </span>-->
             <button ui-sref="homePage.backStage.addActivityNews">添加</button>
         </div>
         <table ng-table="tableParams" class="gm_middle_table" >
@@ -15,9 +15,9 @@
             <tr>
                 <th class="gm_top">
                     <div class="carouseCity-list-top">
-                        <span class="carouseCity-first-theme">信息</span>
+                        <span class="carouseCity-first-theme" style="width: 265px !important;">信息</span>
                         <span class="carouseCity-second-theme">发布人</span>
-                        <span class="carouseCity-third-theme">排序</span>
+                        <span class="carouseCity-third-theme" style="width: 200px !important;">时间</span>
                         <span class="carouseCity-fourth-theme">操作</span>
                     </div>
                 </th>
@@ -26,18 +26,16 @@
             <tbody>
             <tr ng-repeat="gardenInfo in $data">
                 <td class="gm_table">
-                    <div class="carouseCity-list">
-                        <span class="carouseCity-first-theme">
-                            <div class="carouse-img-box"><img ng-src="{{gardenInfo.img_url}}" alt=""></div>
-                        <span class="carouseCity-list-main" ng-bind="gardenInfo.title"></span>
-                    </span>
+                    <div class="carouseCity-list" >
+                        <span class="carouseCity-first-theme" style="width: 265px !important; text-align: center">
+                            <span class="carouseCity-list-main" ng-bind="gardenInfo.title"></span>
+                        </span>
                         <a href="#" target="_blank">
                             <span class="carouseCity-second-theme" ng-bind="gardenInfo.author"></span>
                         </a>
-                        <span class="carouseCity-third-theme">
-                        <img  src="backStageManage/companyShowManage/image/up.jpg" />
-                        <img  src="backStageManage/companyShowManage/image/down.jpg" />
-                    </span>
+                        <span class="carouseCity-third-theme" style="width: 200px !important;">
+                            {{gardenInfo.category_id | date : 'yyyy-MM-dd HH:mm:ss'}}
+                        </span>
                         <span class="carouseCity-fourth-theme">
                         <button ui-sref="homePage.backStage.addActivityNews({articleId:gardenInfo.id})">编辑</button>
                         <button class="con_del_btn" ng-click="deletePublicity(gardenInfo.id)">删除</button>

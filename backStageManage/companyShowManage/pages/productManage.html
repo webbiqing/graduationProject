@@ -23,7 +23,7 @@
                 <td>
                     <div class="attract-investList-mainCon">
                         <div class="attract-investList-header">
-                            <spa>ID:</spa>
+                            <span>ID:</span>
                             <span class="attract-investList-id" style="display:inline-block;margin-right: 20px;">{{product.product_id}}</span>
                             <span>产品名:</span>
                             <span class="attract-investList-id">{{product.product_name}}</span>
@@ -31,14 +31,14 @@
                         </div>
                         <div class="attract-investList-main">
                             <span class="attract-investList-info">
-                                <div class="_industryListImg"><img ng-src="{{carouselData.product_img}}" alt=""></div>
-                                <div class="_industryListInfo">{{product.product_info}}</div>
+                                <div class="_industryListImg"><img ng-src="{{product.product_img | stringFilter}}" alt=""></div>
+                                <div class="_industryListInfo" style="overflow: hidden">{{product.product_info}}</div>
                             </span>
                             <span class="attract-investList-type">
                                 {{product.product_type}}
                             </span>
                             <span class="attract-investList-op">
-                                <button ui-sref="homePage.backStage.addProduct">编辑</button>
+                                <button ui-sref="homePage.backStage.addProduct({pavilion_num:pavilion_num,productId:product.product_id})">编辑</button>
                             </span>
                         </div>
                     </div>

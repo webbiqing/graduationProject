@@ -59,9 +59,9 @@
                     pagination-clickable="false"
                     autoplay="3000"
             >
-                <ks-swiper-slide ng-repeat="s in [1,2,3,4,5]">
+                <ks-swiper-slide ng-repeat="s in carouselData">
                     <div class="swiper-slide-container">
-                        <img ng-src="http://api.randomuser.me/portraits/thumb/women/{{s}}.jpg">
+                        <img ng-src="{{s.product_img | stringFilter}}">
                         <div class="readMore">
                             <button class="f16">阅读更多 <span class="glyphicon glyphicon-list-alt"></span></button>
                         </div>

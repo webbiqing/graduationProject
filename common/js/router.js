@@ -296,27 +296,11 @@ App.config(function($stateProvider, $urlRouterProvider) {
             resolve:{
                 deps:["$ocLazyLoad",function($ocLazyLoad){
                     return $ocLazyLoad.load(['companyShow/js/companyShowDynamicCtr.js']);
-
-                }]
-            }
-        })
-        .state("homePage.companyShow.companyProduct", {
-            url: '/companyProduct',
-            views:{
-                'companyInfo@homePage.companyShow':{
-                    templateUrl:'companyShow/pages/companyProduct.html',
-                    controller:'companyProductCtr'
-                }
-            },
-            resolve:{
-                deps:["$ocLazyLoad",function($ocLazyLoad){
-                    return $ocLazyLoad.load(['companyShow/js/companyProductCtr.js']);
-
                 }]
             }
         })
         .state("homePage.companyShow.companyDynamicDetail", {
-            url: '/companyDynamicDetail',
+            url: '/companyDynamicDetail?newsId',
             views:{
                 'companyInfo@homePage.companyShow':{
                     templateUrl:'companyShow/pages/companyDynamicDetail.html',

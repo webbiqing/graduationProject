@@ -1,7 +1,7 @@
 /**
  * 主体部分控制器
  */
-App.controller('mainBodyCtr', function($rootScope, $scope) {
+App.controller('mainBodyCtr', function($rootScope, $scope,cmsImageUpload) {
     //启动首页主轮播
     (function () {
         var scrollDuration = 2000;
@@ -109,4 +109,21 @@ App.controller('mainBodyCtr', function($rootScope, $scope) {
 
         });
     };
+
+    var querryAll = function (title,type) {
+        var param = {
+            'pavilionNum':'6256826112253366272',
+            'productName':title,
+            'productType':type
+        };
+        cmsImageUpload.Query('exhibition/products',param).then(function (data,header) {
+            if(angular.isUndefined(data.error)) {
+                $scope.carouselData = data.result.data;
+            } else {
+
+            }
+        });
+    };
+    querryAll();
+
 });

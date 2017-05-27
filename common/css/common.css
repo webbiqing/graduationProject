@@ -104,3 +104,8 @@ input,button,textarea,select{
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
+select{
+    width: 100px;
+    height:30px;
+    border-radius: 5px;
+}

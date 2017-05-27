@@ -3,12 +3,12 @@
  */
 App.controller('addProductCtr', function($rootScope, $scope, $stateParams,$resource, $filter,ngDialog,$timeout,cmsImageUpload) {
 
-    $scope.productId = $stateParams.carouseId;
+    $scope.productId = $stateParams.productId;
     $scope.pavilionNum = $stateParams.pavilion_num;
 
     var querryCarouseInfo = function (id) {
         var param = {
-            'id':'6256826112253366272'
+            'id':id
         };
         cmsImageUpload.Query('exhibition/product/:id',param).then(function (data,header) {
             if(angular.isUndefined(data.error)) {
@@ -19,9 +19,8 @@ App.controller('addProductCtr', function($rootScope, $scope, $stateParams,$resou
         });
     };
 
-
-    if($scope.carouselId){
-        querryCarouseInfo($scope.carouselId);
+    if($scope.productId){
+        querryCarouseInfo($scope.productId);
     }
 
     $scope.updateCarouseInfo =function (industryInfo) {
@@ -34,7 +33,7 @@ App.controller('addProductCtr', function($rootScope, $scope, $stateParams,$resou
         };
 
         var param = {
-            id:$scope.carouselId
+            id:$scope.productId
         };
 
         var files1 =document.getElementsByName("file_upload1");
@@ -67,7 +66,7 @@ App.controller('addProductCtr', function($rootScope, $scope, $stateParams,$resou
         var files1 =document.getElementsByName("file_upload1");
         cmsImageUpload.image_upload(files1[0].files[0]).then(function(data){
             if(angular.isUndefined(data.error)){
-                postData.img_url=data.data.result;
+                postData.product_img=data.data.result;
                 cmsImageUpload.Add('exhibition/product',param,postData).then(function (data,header) {
                     debugger;
                     if(angular.isUndefined(data.error)) {

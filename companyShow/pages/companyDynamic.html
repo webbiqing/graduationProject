@@ -11,11 +11,11 @@
 </style>
 <div class="trends-container" style="min-height: 500px;">
     <table class="trends-container-ul table" ng-table="tableParams">
-        <tr>
+        <tr ng-repeat="gardenInfo in $data" ui-sref="homePage.companyShow.companyDynamicDetail({newsId:gardenInfo.id})">
             <td class="trends-container-item" style="cursor: pointer; border-top:none;">
-                <div class="trends-topic">飒飒</div>
-                <div class="trends-text" ng-bind-html="dynamic.content"></div>
-                <div class="trends-date">时间：撒打发斯蒂芬</div>
+                <div class="trends-topic">{{gardenInfo.title}}</div>
+                <div class="trends-text">{{gardenInfo.content}}</div>
+                <div class="trends-date">时间： {{gardenInfo.category_id | date : 'yyyy-MM-dd HH:mm:ss'}}</div>
             </td>
         </tr>
     </table>

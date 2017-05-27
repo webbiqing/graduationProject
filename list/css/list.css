@@ -39,8 +39,8 @@
 .searchBoxContainer .searchResult td{
     padding: 10px 25px;
 }
-.searchBoxContainer .searchResult .companyDetails{
-    background-color: #ddb321;
+.searchBoxContainer .companyDetails{
+    display: inline-block;
 }
 .searchBoxContainer .companyDetails .companyImg{
     width: 270px;
